@@ -69,6 +69,8 @@ body {
   margin: auto;
   margin-bottom: 0px;
   width: 100%;
+  background-image: url('https://github.com/empsebconf/empsebconf.github.io/blob/main/img/TestBackground-1.png');
+  background-repeat: no-repeat;
 }
 
 /* Anchors */
