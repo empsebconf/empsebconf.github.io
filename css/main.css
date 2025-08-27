@@ -68,17 +68,17 @@ html {
 body {
   margin: auto;
   margin-bottom: 0px;
-  width: 70%;
+  width: 100%;
 }
 
 /* Anchors */
 a {
-  color: #a09b8a;
+  color: #27314F;
   font-weight: 600;
 }
 
 a:hover {
-  color: #6a2b54;
+  color: #E2B4A7;
 }
 
 h1 {
@@ -103,7 +103,7 @@ h1 {
   overflow: hidden;
   position: sticky;
   top: 0px;
-  border-bottom: 1px solid #d5d5d5;
+  border-bottom: 0px solid #d5d5d5;
   background-color: #ffffff;
   z-index: 1;
 }
@@ -299,9 +299,6 @@ footer {
   color: #6e4755;
 }
 
-#download-cv a {
-  font-weight: 300;
-}
 
 /* BLOG */
 .slab {
