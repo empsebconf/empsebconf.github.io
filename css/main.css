@@ -105,8 +105,8 @@ h1 {
   overflow: hidden;
   position: sticky;
   top: 0px;
-  border-bottom: 1px solid #d5d5d5;
-  background-color: #FFAFF0;
+  border-bottom: 0px solid #d5d5d5;
+  background-color: #ffffff;
   z-index: 1;
 }
 
