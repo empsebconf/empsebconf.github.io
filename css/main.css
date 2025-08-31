@@ -141,3 +141,9 @@ body {
 .nav-right a.active {
   color: #B5BAA1;   /* hover + active color */
 }
+
+.box {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 50px;
+}
