@@ -91,6 +91,7 @@ h1 {
 }
 
 .nav-bar {
+  width: 100%;                  /* full width background */
   font-family: "Source Sans Pro", "Helvetica", "Sans-Serif";
   font-style: normal;
   padding-bottom: 5px;
@@ -108,6 +109,15 @@ h1 {
   z-index: 1;
 }
 
+.nav-container {
+  width: 90%;                    /* content only 90% */
+  margin: 0 auto;                /* center it */
+  display: flex;
+  justify-content: space-between;/* left + right groups */
+  align-items: center;
+  padding: 15px 0;
+}
+
 /* Navigation bar for computer format */
 .nav-bar-bottom {
   display: none;
@@ -117,6 +127,51 @@ nav a {
   z-index: 1;
   font-size: 2rem;
 }
+
+.nav-left a,
+.nav-right a {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #316669;   /* default color */
+  transition: color 0.3s ease;
+}
+
+.nav-left a:hover,
+.nav-right a:hover,
+.nav-left a.active,
+.nav-right a.active {
+  color: #B5BAA1;   /* hover + active color */
+}
+
+######
+.nav-left,
+.nav-right {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-left li,
+.nav-right li {
+  margin: 0 10px;
+}
+
+.nav-left a,
+.nav-right a {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #252A27;
+}
+
+.nav-left a:hover,
+.nav-right a:hover {
+  color: #B5BAA1;
+}
+######
+
 
 nav li {
   margin-top: -3rem;
