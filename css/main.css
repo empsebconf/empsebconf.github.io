@@ -69,8 +69,6 @@ body {
   margin: auto;
   margin-bottom: 0px;
   width: 100%;
-  background-image: url("../img/20250619_RedCarson.jpg");
-  background-repeat: no-repeat;
 }
 
 /* Anchors */
@@ -372,6 +370,7 @@ footer {
 }
 
 .box {
+  margin-top: 5%;
   margin-left: 15%;
   margin-right: 15%;
   margin-bottom: 50px;
