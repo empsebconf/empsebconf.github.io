@@ -86,7 +86,7 @@ body {
 .nav-bar {
   width: 100%;                  /* full width background */
   background-color: #fefaf1;
-  border-bottom: 1px solid #d5d5d5;
+  border-bottom: 0px solid #d5d5d5;
   position: sticky;
   top: 0;
   z-index: 10;
