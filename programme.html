@@ -30,6 +30,43 @@
     />
   </head>
 
+	<style>
+		.nav-toggle {
+  display: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+/* Hide links by default on mobile */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+
+  body.nav-open .nav-links {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+}
+
+	</style>
+
   <body>
     
 
