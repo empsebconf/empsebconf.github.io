@@ -44,11 +44,11 @@
     }
 
     .text {
-      flex: 0 0 40%; /* fixed 70% width */
+      flex: 0 0 100%; /* fixed 70% width */
     }
 
     .image {
-      flex: 0 0 60%; /* fixed 30% width */
+      flex: 0 0 100%; /* fixed 30% width */
     }
 
     .image img {
@@ -154,27 +154,21 @@ body {
   </div>
 </nav>
 
-	<div class="box">
-	<div class="container">
-		<div class="text">
-      	<p class="pserif">
-        	Coming soon!
-    		<br> <br>
-    	</p>
-			
-		</div>
-    	<div class="image">
-      		<img
-        	src="img/T6.png"
-        	alt="Logo"
-        	width="100%"
-			height="auto"
-      		/>
 
-		</div>
+<div class="box"> <!--- Needed to keep everthing into a 80% width box -->
+          <p class="pserif">
+          Coming soon!
+          </p>
 
-    </div>
-    </div>
+		<center> 
+			<p> 
+				<img src="img/T6.png"
+					width="100%" 
+					height="auto">
+			</p> 
+		</center>
+	  
+  	</div>
 	
 <script>
 document.addEventListener("DOMContentLoaded", function () {
