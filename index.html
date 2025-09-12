@@ -56,6 +56,22 @@
       display: block;
     }
 
+	@media screen and (max-width: 768px) {
+
+	body {
+    	width: 85%;
+  		}
+      	
+	.container {
+        flex-direction: column;
+        text-align: center; /* optional, looks nicer */
+      }
+
+  	.text, .image {
+    	flex: 0 0 100%;           /* full width for both */
+  	}
+	}
+
   </style>
 
 	  
