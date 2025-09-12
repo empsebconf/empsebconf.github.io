@@ -31,69 +31,109 @@
   </head>
 
 	<style>
-		.nav-toggle {
+	/* NAVIGATION BAR GENERAL */
+.nav-bar {
+  width: 100%;
+  background-color: #fefaf1; /* nav background */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 0.5rem 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between; /* logo left, menu right */
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;   /* optional for desktop */
+  margin: 0 auto;
+}
+
+/* Logo on left */
+.nav-left {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Navigation links */
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;            /* spacing between menu items */
+}
+
+.nav-links li a {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #316669;       /* default link color */
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #B5BAA1;       /* hover/active color */
+}
+
+/* HAMBURGER BUTTON (MOBILE) */
+.nav-toggle {
   display: none;
   font-size: 2.5rem;
   cursor: pointer;
 }
 
-/* Hide bullets and reset padding */
-.nav-links {
-  width: 100%;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-.nav-links li {
-  margin: 0 10px;
-}
-
+/* MOBILE STYLES */
 @media (max-width: 768px) {
+
   .nav-container {
-	width: 100%;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: column;      /* stack logo + hamburger + menu */
     align-items: center;
-  }
-
-  .nav-toggle {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;          /* hidden by default on mobile */
-    flex-direction: column; /* stacked vertically */
-    text-align: center;
     width: 100%;
   }
 
+  /* Show hamburger */
+  .nav-toggle {
+    display: block;
+    margin-top: 0.5rem;
+  }
+
+  /* Hide menu by default */
+  .nav-links {
+    display: none;
+    flex-direction: column;      /* vertical stack */
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+    gap: 10px;                   /* space between items vertically */
+  }
+
+  /* Show menu when toggled */
   body.nav-open .nav-links {
-    display: flex;          /* show when toggled */
+    display: flex;
   }
 
+  /* Menu items full width & centered */
   .nav-links li {
-    margin: 10px 0;
+    width: 100%;
   }
 
-  .nav-links a,
-  .nav-open a {
-  font-size: 1.8rem;
-  font-weight: 600;
-  text-decoration: none;
-  color: #316669;   /* default color */
-  transition: color 0.3s ease;
-}
+  .nav-links li a {
+    display: inline-block;
+    width: auto;
+  }
 
-.nav-open a:hover,
-.nav-links a:hover,
-.nav-open a.active,
-.nav-links a.active {
-  color: #B5BAA1;   /* hover + active color */
+  /* Optional: center logo and hamburger */
+  .nav-left, .nav-toggle {
+    width: 100%;
+    text-align: center;
+  }
 }
-}
-
 
 	</style>
 
