@@ -30,6 +30,31 @@
     />
   </head>
 
+	<style>
+		@media screen and (max-width: 768px) {
+  .nav-bar {
+    display: block;  /* keep visible */
+  }
+
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-left,
+  .nav-right {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .nav-left li,
+  .nav-right li {
+    margin: 10px 0;
+  }
+}
+	</style>
+
   <body>
     <nav class="nav-bar">
     <div class="nav-container">
