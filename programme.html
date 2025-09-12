@@ -30,23 +30,25 @@
     />
   </head>
 
-	<style>
+<style>
+
 	/* NAVIGATION BAR GENERAL */
 .nav-bar {
   width: 100%;
-  background-color: #fefaf1; /* nav background */
+  background-color: #fefaf1;
   position: sticky;
   top: 0;
   z-index: 100;
-  padding: 0.5rem 0;
+  padding: 0;
+  margin: 0;
 }
 
 .nav-container {
   display: flex;
-  justify-content: space-between; /* logo left, menu right */
+  justify-content: space-between; /* logo left, menu right on large screens */
   align-items: center;
   width: 100%;
-  max-width: 1200px;   /* optional for desktop */
+  max-width: 1200px;   /* optional, for desktop layout */
   margin: 0 auto;
 }
 
@@ -65,52 +67,63 @@
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 20px;            /* spacing between menu items */
+  gap: 20px;           /* spacing between menu items */
 }
 
 .nav-links li a {
   font-size: 1.8rem;
   font-weight: 600;
   text-decoration: none;
-  color: #316669;       /* default link color */
+  color: #316669;
   transition: color 0.3s ease;
 }
 
 .nav-links li a:hover,
 .nav-links li a.active {
-  color: #B5BAA1;       /* hover/active color */
+  color: #B5BAA1;
 }
 
-/* HAMBURGER BUTTON (MOBILE) */
+/* Hamburger button (hidden on large screens) */
 .nav-toggle {
   display: none;
   font-size: 2.5rem;
   cursor: pointer;
 }
 
-/* MOBILE STYLES */
+/* ---------------------- MOBILE ---------------------- */
 @media (max-width: 768px) {
 
+  /* Stack logo + toggle + menu */
   .nav-container {
-    flex-direction: column;      /* stack logo + hamburger + menu */
-    align-items: center;
+    flex-direction: column;
+    align-items: center;   /* centers everything */
     width: 100%;
+    max-width: 100%;       /* override desktop max-width */
+    margin: 0;             /* remove auto centering */
+  }
+
+  /* Center the logo */
+  .nav-left {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
   }
 
   /* Show hamburger */
   .nav-toggle {
     display: block;
-    margin-top: 0.5rem;
+    margin: 0.5rem auto;   /* center it horizontally */
   }
 
-  /* Hide menu by default */
+  /* Hide menu initially */
   .nav-links {
     display: none;
-    flex-direction: column;      /* vertical stack */
+    flex-direction: column;  
     width: 100%;
     text-align: center;
     margin-top: 1rem;
-    gap: 10px;                   /* space between items vertically */
+    gap: 10px;
   }
 
   /* Show menu when toggled */
@@ -118,38 +131,32 @@
     display: flex;
   }
 
-  /* Menu items full width & centered */
+  /* Menu items full width and centered */
   .nav-links li {
     width: 100%;
+    margin: 10px 0;
   }
 
   .nav-links li a {
     display: inline-block;
     width: auto;
   }
-
-  /* Optional: center logo and hamburger */
-  .nav-left, .nav-toggle {
-    width: 100%;
-    text-align: center;
-  }
 }
 
-	</style>
+
+</style>
 
   <body>
     
-
-	  <nav class="nav-bar">
+<nav class="nav-bar">
   <div class="nav-container">
     <ul class="nav-left">
-        	<li>	<a href="index.html" class="active"> 
-					<img src="img/Logo-EMPSEB31.png" 
-						width="60px"
-						height="auto">
-					</a>
-			</li>
-      	</ul>
+      <li>
+        <a href="index.html" class="active">
+          <img src="img/Logo-EMPSEB31.png" width="60px" height="auto">
+        </a>
+      </li>
+    </ul>
 
     <!-- Hamburger button -->
     <div class="nav-toggle" onclick="document.body.classList.toggle('nav-open')">
@@ -170,6 +177,7 @@
 </nav>
 
 
+
     <!---  <hr> -->
     <div class="box"> <!--- Line needed to keep contents in a 80% box -->
           <p class="pserif">
@@ -179,6 +187,12 @@
 	
   
   	</div>
+
+	<script>
+function toggleMenu() {
+  document.body.classList.toggle('nav-open');
+}
+</script>
 
   </body>
 </html>
