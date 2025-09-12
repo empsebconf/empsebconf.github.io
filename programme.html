@@ -31,27 +31,36 @@
   </head>
 
   <body>
-    <nav class="nav-bar">
-    <div class="nav-container">
-      <ul class="nav-left">
-        	<li>	<a href="index.html" class="active"> 
-					<img src="img/Logo-EMPSEB31.png" 
-						width="60px"
-						height="auto">
-					</a>
-			</li>
-      </ul>
-      <ul class="nav-right">
-        <li><a href="registration.html">Registration</a></li>
-        <li><a href="keynotes.html">Plenaries & Workshops</a></li>
-        <li><a href="programme.html" class="active">Programme</a></li>
-        <li><a href="venue.html">Venue</a></li>
-        <li><a href="organisers.html">Organisers</a></li>
-        <li><a href="sponsors.html">Sponsors</a></li>
-        <li><a href="history.html">EMPSEB</a></li>
-      </ul>
+    
+
+	  <nav class="nav-bar">
+  <div class="nav-container">
+    <div class="nav-logo">
+      <a href="index.html">
+        <img src="img/Logo-EMPSEB31.png" 
+			width="60px"
+			height="auto">
+      </a>
     </div>
-  </nav>
+
+    <!-- Hamburger button -->
+    <div class="nav-toggle" onclick="document.body.classList.toggle('nav-open')">
+      ☰
+    </div>
+
+    <!-- Navigation links -->
+    <ul class="nav-links">
+      <li><a href="registration.html">Registration</a></li>
+      <li><a href="keynotes.html">Plenaries & Workshops</a></li>
+      <li><a href="programme.html">Programme</a></li>
+      <li><a href="venue.html">Venue</a></li>
+      <li><a href="organisers.html">Organisers</a></li>
+      <li><a href="sponsors.html">Sponsors</a></li>
+      <li><a href="history.html">EMPSEB</a></li>
+    </ul>
+  </div>
+</nav>
+
 
     <!---  <hr> -->
     <div class="box"> <!--- Line needed to keep contents in a 80% box -->
