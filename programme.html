@@ -149,12 +149,14 @@
   	</div>
 
 	  <script>
-function toggleMenu() {
-  const navLeft = document.querySelector('.nav-left');
-  const navRight = document.querySelector('.nav-right');
-  navLeft.classList.toggle('active');
-  navRight.classList.toggle('active');
-}
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.querySelector(".hamburger");
+  const navRight = document.querySelector(".nav-right");
+
+  hamburger.addEventListener("click", function () {
+    navRight.classList.toggle("active");
+  });
+});
 </script>
 
 
