@@ -8,11 +8,15 @@
         flex-direction: column;
         text-align: center; /* optional, looks nicer */
       }
+
+  	.text, .image {
+    	flex: 0 0 100%;           /* full width for both */
+  	}
     
 
-  .nav-bar { /* I THINK THIS IS WHY WE CANNOT SEE IT */
-    display: none;
-  }
+ /* .nav-bar { I THINK THIS IS WHY WE CANNOT SEE IT */
+  /*  display: none;*/
+  /*}*/
 
   .nav-bar-bottom {
     display: block;
