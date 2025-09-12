@@ -30,169 +30,64 @@
     />
   </head>
 
-<style>
+	<style>
+		@media screen and (max-width: 768px) {
+  .nav-bar {
+    display: block;  /* keep visible */
+  }
 
-	/* NAVIGATION BAR GENERAL */
-.nav-bar {
-  width: 100%;
-  background-color: #fefaf1;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  padding: 0;
-  margin: 0;
-}
-
-.nav-container {
-  display: flex;
-  justify-content: space-between; /* logo left, menu right on large screens */
-  align-items: center;
-  width: 100%;
-  max-width: 1200px;   /* optional, for desktop layout */
-  margin: 0 auto;
-}
-
-/* Logo on left */
-.nav-left {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-}
-
-/* Navigation links */
-.nav-links {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 20px;           /* spacing between menu items */
-}
-
-.nav-links li a {
-  font-size: 1.8rem;
-  font-weight: 600;
-  text-decoration: none;
-  color: #316669;
-  transition: color 0.3s ease;
-}
-
-.nav-links li a:hover,
-.nav-links li a.active {
-  color: #B5BAA1;
-}
-
-/* Hamburger button (hidden on large screens) */
-.nav-toggle {
-  display: none;
-  font-size: 2.5rem;
-  cursor: pointer;
-}
-
-/* ---------------------- MOBILE ---------------------- */
-@media (max-width: 768px) {
-
-  /* Stack logo + toggle + menu */
   .nav-container {
     flex-direction: column;
-    align-items: center;   /* centers everything */
+    align-items: center;
+  }
+
+  .nav-left,
+  .nav-right {
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    max-width: 100%;       /* override desktop max-width */
-    margin: 0;             /* remove auto centering */
   }
 
-  /* Center the logo */
-  .nav-left {
-    width: 100%;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-  }
-
-  /* Show hamburger */
-  .nav-toggle {
-    display: block;
-    margin: 0.5rem auto;   /* center it horizontally */
-  }
-
-  /* Hide menu initially */
-  .nav-links {
-    display: none;
-    flex-direction: column;  
-    width: 100%;
-    text-align: center;
-    margin-top: 1rem;
-    gap: 10px;
-  }
-
-  /* Show menu when toggled */
-  body.nav-open .nav-links {
-    display: flex;
-  }
-
-  /* Menu items full width and centered */
-  .nav-links li {
-    width: 100%;
+  .nav-left li,
+  .nav-right li {
     margin: 10px 0;
   }
-
-  .nav-links li a {
-    display: inline-block;
-    width: auto;
-  }
 }
-
-
-</style>
+	</style>
 
   <body>
-    
-<nav class="nav-bar">
-  <div class="nav-container">
-    <ul class="nav-left">
-      <li>
-        <a href="index.html" class="active">
-          <img src="img/Logo-EMPSEB31.png" width="60px" height="auto">
-        </a>
-      </li>
-    </ul>
-
-    <!-- Hamburger button -->
-    <div class="nav-toggle" onclick="document.body.classList.toggle('nav-open')">
-      ☰
+    <nav class="nav-bar">
+    <div class="nav-container">
+      <ul class="nav-left">
+        	<li>	<a href="index.html" class="active"> 
+					<img src="img/Logo-EMPSEB31.png" 
+						width="60px"
+						height="auto">
+					</a>
+			</li>
+      	</ul>
+      <ul class="nav-right">
+        <li><a href="registration.html">Registration</a></li>
+        <li><a href="keynotes.html">Plenaries & Workshops</a></li>
+        <li><a href="programme.html" class="active">Programme</a></li>
+        <li><a href="venue.html">Venue</a></li>
+        <li><a href="organisers.html">Organisers</a></li>
+        <li><a href="sponsors.html">Sponsors</a></li>
+        <li><a href="history.html">EMPSEB</a></li>
+      </ul>
     </div>
-
-    <!-- Navigation links -->
-    <ul class="nav-links">
-      <li><a href="registration.html">Registration</a></li>
-      <li><a href="keynotes.html">Plenaries & Workshops</a></li>
-      <li><a href="programme.html">Programme</a></li>
-      <li><a href="venue.html">Venue</a></li>
-      <li><a href="organisers.html">Organisers</a></li>
-      <li><a href="sponsors.html">Sponsors</a></li>
-      <li><a href="history.html">EMPSEB</a></li>
-    </ul>
-  </div>
-</nav>
-
-
+  </nav>
 
     <!---  <hr> -->
     <div class="box"> <!--- Line needed to keep contents in a 80% box -->
           <p class="pserif">
           Coming soon!
+     
           </p>
 
 	
-  
+        
   	</div>
-
-	<script>
-function toggleMenu() {
-  document.body.classList.toggle('nav-open');
-}
-</script>
 
   </body>
 </html>
