@@ -28,38 +28,167 @@
       href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-  </head>
+   <link rel="stylesheet" href="css/responsive.css" />  
+
+
+<style>
+
+	.container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      max-width: 1000px;
+      margin: 0 auto;
+	  margin-top: 20px;
+      gap: 20px;
+    }
+
+    .text {
+      flex: 0 0 20%; /* fixed 70% width */
+    }
+
+    .image {
+      flex: 0 0 80%; /* fixed 30% width */
+    }
+
+    .image img {
+      width: 100%;  /* fill the 30% space */
+      height: auto; /* keep proportions */
+      display: block;
+    }
+
+
+/* Hide hamburger on large screens */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  z-index: 1000;   /* ensure it sits on top */
+  padding: 10px;
+}
+
+.hamburger img {
+  width: 30px;
+  height: auto;
+}
+
+/* --- Mobile styles --- */
+@media screen and (max-width: 768px) {
+
+body {
+    	width: 85%;
+  		}
+      	
+	.container {
+        flex-direction: column;
+        text-align: center; /* optional, looks nicer */
+      }
+
+  	.text, .image {
+    	flex: 0 0 100%;           /* full width for both */
+  	}
+	
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-logo {
+    margin-bottom: 10px;
+  }
+
+  .hamburger {
+    display: block; /* show hamburger */
+    margin-bottom: 10px;
+  }
+
+  /* make sure the image is visible on mobile */
+  .hamburger img {
+    display: block;
+  }
+
+  .nav-right {
+    display: none; /* hidden by default */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .nav-right.active {
+    display: flex; /* show when toggled */
+  }
+
+  .nav-right li {
+    margin: 10px 0;
+  }
+}
+
+	</style>
 
   <body>
-    <nav class="nav-bar">
-    <div class="nav-container">
-      <ul class="nav-left">
-        	<li>	<a href="index.html" class="active"> 
-					<img src="img/Logo-EMPSEB31.png" 
-						width="60px"
-						height="auto">
-					</a>
-			    </li>
-      </ul>
-      <ul class="nav-right">
-        <li><a href="registration.html">Registration</a></li>
-        <li><a href="keynotes.html">Plenaries & Workshops</a></li>
-        <li><a href="programme.html">Programme</a></li>
-        <li><a href="venue.html" class="active">Venue</a></li>
-        <li><a href="organisers.html">Organisers</a></li>
-        <li><a href="sponsors.html">Sponsors</a></li>
-        <li><a href="history.html">EMPSEB</a></li>
-      </ul>
+<nav class="nav-bar">
+  <div class="nav-container">
+    
+    <!-- Logo (always visible, on top) -->
+    <div class="nav-logo">
+      <a href="index.html" class="active">
+        <img src="img/Logo-EMPSEB31.png" width="60" height="auto" alt="EMPSEB31 Logo">
+      </a>
     </div>
-  </nav>
 
-    <!---  <hr> -->
-    <div class="box"> <!--- Line needed to keep contents in a 80% box -->
-          <p class="pserif">
-          Coming soon!
-          </p>
- 
-  	</div>
+    <!-- Hamburger (only on small screens) -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <img src="img/MenuBar.png" alt="Menu" width="20" height="auto">
+    </div>
+
+    <!-- Menu links -->
+    <ul class="nav-right">
+      <li><a href="registration.html">Registration</a></li>
+      <li><a href="keynotes.html" class="active">Plenaries & Workshops</a></li>
+      <li><a href="programme.html">Programme</a></li>
+      <li><a href="venue.html">Venue</a></li>
+      <li><a href="organisers.html">Organisers</a></li>
+      <li><a href="sponsors.html">Sponsors</a></li>
+      <li><a href="history.html">EMPSEB</a></li>
+    </ul>
+
+  </div>
+</nav>
+
+	<div class="box">
+	<div class="container">
+		<div class="text">
+      	<p class="pserif">
+        	Coming soon!
+    		<br> <br>
+    	</p>
+			
+		</div>
+    	<div class="image">
+      		<img
+        	src="img/T6.png"
+        	alt="Logo"
+        	width="100%"
+			height="auto"
+      		/>
+
+		</div>
+
+    </div>
+    </div>
+	
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.querySelector(".hamburger");
+  const navRight = document.querySelector(".nav-right");
+
+  hamburger.addEventListener("click", function () {
+    navRight.classList.toggle("active");
+  });
+});
+</script>
 
   </body>
+</html>
+
+</body>
 </html>
