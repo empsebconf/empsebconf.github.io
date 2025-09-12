@@ -33,6 +33,31 @@
 
 <style>
 
+	    .container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      max-width: 1000px;
+      margin: 0 auto;
+	  margin-top: 20px;
+      gap: 20px;
+    }
+
+    .text {
+      flex: 0 0 70%; /* fixed 70% width */
+    }
+
+    .image {
+      flex: 0 0 30%; /* fixed 30% width */
+    }
+
+    .image img {
+      width: 100%;  /* fill the 30% space */
+      height: auto; /* keep proportions */
+      display: block;
+    }
+
+
 /* Hide hamburger on large screens */
 .hamburger {
   display: none;
@@ -48,6 +73,20 @@
 
 /* --- Mobile styles --- */
 @media screen and (max-width: 768px) {
+
+body {
+    	width: 85%;
+  		}
+      	
+	.container {
+        flex-direction: column;
+        text-align: center; /* optional, looks nicer */
+      }
+
+  	.text, .image {
+    	flex: 0 0 100%;           /* full width for both */
+  	}
+	
   .nav-container {
     flex-direction: column;
     align-items: center;
