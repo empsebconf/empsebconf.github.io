@@ -54,8 +54,10 @@
 }
 
 .hamburger img {
-  width: 30px;
-  height: auto;
+  display: none;   /* hidden on big screens */
+  cursor: pointer;
+  z-index: 1000;   /* make sure it’s clickable */
+  padding: 10px; 
 }
 
 /* Desktop menu */
@@ -79,6 +81,7 @@
   .hamburger {
     display: block; /* show hamburger */
     margin-bottom: 10px;
+	  
   }
 
   .nav-right {
