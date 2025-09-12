@@ -68,7 +68,7 @@ body {
   padding: 0;
   width: 100%;
   font-family: "Source Sans Pro", "Helvetica", "Sans-Serif";
-  background-color: #fefaf1; /* full page background */
+  background-color: #FEFCF6; /* full page background */
 }
 
 /* GENERAL RESET */
@@ -81,7 +81,7 @@ html {
   font-style: normal;
   text-align: right;
   padding-bottom: 5px;
-  padding-top: 40px;
+  padding-top: 20px;
   margin-top: 0px; /* Space between navegation bar and top of body*/
   list-style: none;
   font-weight: 500;
