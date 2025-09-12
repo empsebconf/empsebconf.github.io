@@ -28,10 +28,12 @@
       href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-  </head>
+   <link rel="stylesheet" href="css/responsive.css" />  
 
-	<style>
-    .container {
+
+<style>
+
+	    .container {
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -42,11 +44,11 @@
     }
 
     .text {
-      flex: 0 0 40%; /* fixed 70% width */
+      flex: 0 0 70%; /* fixed 70% width */
     }
 
     .image {
-      flex: 0 0 60%; /* fixed 30% width */
+      flex: 0 0 30%; /* fixed 30% width */
     }
 
     .image img {
@@ -55,9 +57,24 @@
       display: block;
     }
 
-	@media screen and (max-width: 768px) {
 
-	body {
+/* Hide hamburger on large screens */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  z-index: 1000;   /* ensure it sits on top */
+  padding: 10px;
+}
+
+.hamburger img {
+  width: 30px;
+  height: auto;
+}
+
+/* --- Mobile styles --- */
+@media screen and (max-width: 768px) {
+
+body {
     	width: 85%;
   		}
       	
@@ -69,32 +86,74 @@
   	.text, .image {
     	flex: 0 0 100%;           /* full width for both */
   	}
-	}
+	
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+  }
 
-  </style>
+  .nav-logo {
+    margin-bottom: 10px;
+  }
+
+  .hamburger {
+    display: block; /* show hamburger */
+    margin-bottom: 10px;
+  }
+
+  /* make sure the image is visible on mobile */
+  .hamburger img {
+    display: block;
+  }
+
+  .nav-right {
+    display: none; /* hidden by default */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .nav-right.active {
+    display: flex; /* show when toggled */
+  }
+
+  .nav-right li {
+    margin: 10px 0;
+  }
+}
+
+	</style>
 
   <body>
-    <nav class="nav-bar">
-    <div class="nav-container">
-      <ul class="nav-left">
-        	<li>	<a href="index.html" class="active"> 
-					<img src="img/Logo-EMPSEB31.png" 
-						width="60px"
-						height="auto">
-					</a>
-			</li>
-      	</ul>
-      <ul class="nav-right">
-        <li><a href="registration.html">Registration</a></li>
-        <li><a href="keynotes.html">Plenaries & Workshops</a></li>
-        <li><a href="programme.html">Programme</a></li>
-        <li><a href="venue.html">Venue</a></li>
-        <li><a href="organisers.html">Organisers</a></li>
-        <li><a href="sponsors.html">Sponsors</a></li>
-        <li><a href="history.html" class="active">EMPSEB</a></li>
-      </ul>
+<nav class="nav-bar">
+  <div class="nav-container">
+    
+    <!-- Logo (always visible, on top) -->
+    <div class="nav-logo">
+      <a href="index.html" class="active">
+        <img src="img/Logo-EMPSEB31.png" width="60" height="auto" alt="EMPSEB31 Logo">
+      </a>
     </div>
-  </nav>
+
+    <!-- Hamburger (only on small screens) -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <img src="img/MenuBar.png" alt="Menu" width="20" height="auto">
+    </div>
+
+    <!-- Menu links -->
+    <ul class="nav-right">
+      <li><a href="registration.html">Registration</a></li>
+      <li><a href="keynotes.html">Plenaries & Workshops</a></li>
+      <li><a href="programme.html" class="active">Programme</a></li>
+      <li><a href="venue.html">Venue</a></li>
+      <li><a href="organisers.html">Organisers</a></li>
+      <li><a href="sponsors.html">Sponsors</a></li>
+      <li><a href="history.html">EMPSEB</a></li>
+    </ul>
+
+  </div>
+</nav>
+
 
     <!---  <hr> -->
     <div class="box">
