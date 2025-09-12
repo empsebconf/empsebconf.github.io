@@ -1,13 +1,14 @@
-    @media screen and (max-width: 768px) {
-		body {
-    		width: 85%;
+@media screen and (max-width: 768px) {
+
+	body {
+    	width: 85%;
   		}
       	
-		.container {
-        	flex-direction: column;
-        	text-align: center; /* optional, looks nicer */
-      	}
-    }
+	.container {
+        flex-direction: column;
+        text-align: center; /* optional, looks nicer */
+      }
+    
 
   .nav-bar { /* I THINK THIS IS WHY WE CANNOT SEE IT */
     display: none;
