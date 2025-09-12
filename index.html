@@ -34,14 +34,25 @@
 <style>
     .container {
       display: flex;
-      align-items: center; /* vertically center */
-      justify-content: space-between;
-      gap: 20px; /* space between text and image */
+      flex-direction: row;
+      align-items: center;
+      max-width: 1000px;
+      margin: 0 auto;
+      gap: 20px;
     }
 
-    .container img {
-      max-width: 30%; /* prevent image from being too large */
-      height: auto;
+    .text {
+      flex: 0 0 70%; /* fixed 70% width */
+    }
+
+    .image {
+      flex: 0 0 30%; /* fixed 30% width */
+    }
+
+    .image img {
+      width: 100%;  /* fill the 30% space */
+      height: auto; /* keep proportions */
+      display: block;
     }
   
     @media screen and (max-width: 768px) {
@@ -79,6 +90,7 @@
 
 	<div class="box">
 	<div class="container">
+		<div class="text">
       	<p class="pserif">
         	The European Meeting for PhD students in Evolutionary Biology (EMPSEB) is an annual conference organised by and intended for doctoral students. 
 	    	Since its establishment in 1995, EMPSEB has been a valuable annual gathering for doctoral students from around the world.
@@ -88,21 +100,21 @@
 	    	The conference offers a platform for PhD students to share ideas, learn, and connect with peers and professionals in the field.
     		<br> <br>
     	</p>
-
-		<center>
-		<p>
+			
+		</div>
+    	<div class="image">
       		<img
         	src="img/T1.png"
         	alt="Logo"
         	width="100%"
 			height="auto"
       		/>
-    	</p>
-		</center>
+
+		</div>
 
     </div>
     </div>
-	 </div>
+	
 
 
   </body>
