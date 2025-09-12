@@ -31,70 +31,78 @@
   </head>
 
 	<style>
+/* Base nav styles */
+.nav-container {
+  display: flex;
+  flex-direction: column; /* stack logo + menu vertically */
+  align-items: center;
+}
 
-	.hamburger {
-  display: none; /* hidden by default */
-  flex-direction: column;
+/* Logo always visible */
+.nav-logo {
+  margin: 10px 0;
+}
+
+/* Hide hamburger on desktop */
+.hamburger {
+  display: none;
   cursor: pointer;
   margin: 10px 0;
 }
 
-.hamburger .bar {
-  width: 25px;
-  height: 3px;
-  background-color: #333;
-  margin: 4px 0;
-  transition: 0.4s;
+.hamburger img {
+  width: 30px;
+  height: auto;
 }
-		
+
+/* Desktop: show menu */
+.nav-right {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+/* Mobile styles */
 @media screen and (max-width: 768px) {
   .hamburger {
-    display: flex; /* show hamburger */
+    display: block; /* show hamburger */
   }
 
-  .nav-left,
   .nav-right {
-    display: none; /* hide nav links by default */
+    display: none; /* hide menu by default */
     flex-direction: column;
     align-items: center;
     width: 100%;
   }
 
-  .nav-left.active,
   .nav-right.active {
-    display: flex; /* show nav links when active */
+    display: flex; /* show when toggled */
   }
 
-  .nav-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .nav-left li,
   .nav-right li {
     margin: 10px 0;
   }
 }
+
 	</style>
 
   <body>
-    <nav class="nav-bar">
+<nav class="nav-bar">
   <div class="nav-container">
-    <!-- Hamburger button -->
-    <div class="hamburger" onclick="toggleMenu()">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
+    
+    <!-- Logo (always visible, on top) -->
+    <div class="nav-logo">
+      <a href="index.html" class="active">
+        <img src="img/Logo-EMPSEB31.png" width="60" height="auto" alt="EMPSEB31 Logo">
+      </a>
     </div>
 
-    <ul class="nav-left">
-      <li>
-        <a href="index.html" class="active">
-          <img src="img/Logo-EMPSEB31.png" width="60px" height="auto">
-        </a>
-      </li>
-    </ul>
+    <!-- Hamburger (only on small screens) -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <img src="img/hamburger.png" alt="menu" width="30" height="30">
+    </div>
 
+    <!-- Menu links -->
     <ul class="nav-right">
       <li><a href="registration.html">Registration</a></li>
       <li><a href="keynotes.html">Plenaries & Workshops</a></li>
@@ -104,8 +112,10 @@
       <li><a href="sponsors.html">Sponsors</a></li>
       <li><a href="history.html">EMPSEB</a></li>
     </ul>
+
   </div>
 </nav>
+
 
 
     <!---  <hr> -->
