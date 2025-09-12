@@ -14,61 +14,13 @@
   	}
     
 
- /* .nav-bar { I THINK THIS IS WHY WE CANNOT SEE IT */
-  /*  display: none;*/
-  /*}*/
+  	footer {
+    	width: 85%;
+  	}
 
-  .nav-bar-bottom {
-    display: block;
-    padding-top: 2rem;
-    padding-bottom: 1rem;
-    font-family: "Source Sans Pro", "Helvetica", "Sans-Serif";
-    font-style: normal;
-    list-style: none;
-    font-weight: 500;
-    font-size: large;
-    text-align: center;
-    overflow: hidden;
-    position: sticky;
-    bottom: 0rem;
-    border-top: 1px solid #d5d5d5;
-    background-color: #ffffff;
-    z-index: 1;
-  }
-
-  .nav-bar-bottom li a {
-    margin-right: 0rem;
-    margin-left: 0rem;
-  }
-
-  footer {
-    width: 85%;
-  }
-
-  .rsrcht {
-    width: 100%;
-    font-size: 3rem;
-    color: #6a2b54;
-    font-family: "Adobe Garamond Pro";
-    padding-bottom: 0px;
-    margin-bottom: 1px;
-  }
-
-
-  #image-Afra {
-    float: none;
-    width: 70%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 5rem;
-  }
-
-
-  /* BLOG */
-  .box {
-    width: 100%;
-    margin-left: 0%;
-    margin-right: 0%;
-  }
+  	.box {
+    	width: 100%;
+    	margin-left: 0%;
+    	margin-right: 0%;
+  	}
 }
