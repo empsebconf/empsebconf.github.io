@@ -31,23 +31,25 @@
   </head>
 
 	<style>
-/* Base nav styles */
+
+/* Default (desktop view) */
 .nav-container {
   display: flex;
-  flex-direction: column; /* stack logo + menu vertically */
+  flex-direction: row;           /* row layout on large screens */
+  justify-content: space-between; /* logo left, menu right */
   align-items: center;
+  padding: 10px 20px;
+  width: 100%;
 }
 
-/* Logo always visible */
-.nav-logo {
-  margin: 10px 0;
+.nav-logo img {
+  display: block;
 }
 
-/* Hide hamburger on desktop */
+/* Hide hamburger on large screens */
 .hamburger {
   display: none;
   cursor: pointer;
-  margin: 10px 0;
 }
 
 .hamburger img {
@@ -55,34 +57,45 @@
   height: auto;
 }
 
-/* Desktop: show menu */
+/* Desktop menu */
 .nav-right {
   display: flex;
   gap: 20px;
   list-style: none;
 }
 
-/* Mobile styles */
+/* --- Mobile styles --- */
 @media screen and (max-width: 768px) {
+  .nav-container {
+    flex-direction: column; /* stack logo, hamburger, menu */
+    align-items: center;
+  }
+
+  .nav-logo {
+    margin-bottom: 10px;
+  }
+
   .hamburger {
     display: block; /* show hamburger */
+    margin-bottom: 10px;
   }
 
   .nav-right {
-    display: none; /* hide menu by default */
+    display: none; /* hidden by default */
     flex-direction: column;
     align-items: center;
     width: 100%;
   }
 
   .nav-right.active {
-    display: flex; /* show when toggled */
+    display: flex; /* show menu when toggled */
   }
 
   .nav-right li {
     margin: 10px 0;
   }
 }
+
 
 	</style>
 
