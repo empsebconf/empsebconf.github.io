@@ -6,7 +6,7 @@
     <!-- determines the characters we're using -->
     <meta charset="utf-8" />
     <!-- Tab  icon -->
-    <link rel="icon" type="image/png" href="img/individual.png" />
+    <link rel="icon" type="image/png" href="img/EMPSEB31_icon.png" />
     <!-- appears on google faster  -->
     <meta name="robots" content="index, follow" />
     <meta
@@ -28,25 +28,61 @@
       href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-  </head>
+   <link rel="stylesheet" href="css/responsive.css" />  
+
 
 <style>
 
-/* Hide hamburger on large screens */
-.hamburger {
-  display: none;
-  cursor: pointer;
-  z-index: 1000;   /* ensure it sits on top */
-  padding: 10px;
-}
+	.container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      max-width: 1000px;
+      margin: 0 auto;
+	  margin-top: 20px;
+      gap: 20px;
+    }
 
-.hamburger img {
-  width: 30px;
-  height: auto;
-}
+    .text {
+      flex: 0 0 70%; /* fixed 70% width */
+    }
+
+    .image {
+      flex: 0 0 30%; /* fixed 30% width */
+    }
+
+    .image img {
+      width: 100%;  /* fill the 30% space */
+      height: auto; /* keep proportions */
+      display: block;
+    }
+
+
+	/* Hide hamburger on large screens */
+	.hamburger {
+  		display: none;
+  		cursor: pointer;
+  		z-index: 1000;   /* ensure it sits on top */
+  		padding: 10px;
+	}
+
+	.hamburger img {
+ 	 	width: 30px;
+  		height: auto;
+	}
 
 /* --- Mobile styles --- */
-@media screen and (max-width: 768px) {
+	@media screen and (max-width: 768px) {
+      	
+	.container {
+        flex-direction: column;
+        text-align: center; /* optional, looks nicer */
+      }
+
+  	.text, .image {
+    	flex: 0 0 100%;           /* full width for both */
+  	}
+	
   .nav-container {
     flex-direction: column;
     align-items: center;
@@ -106,33 +142,50 @@
       <li><a href="keynotes.html">Plenaries & Workshops</a></li>
       <li><a href="programme.html">Programme</a></li>
       <li><a href="venue.html">Venue</a></li>
-      <li><a href="organisers.html">Organisers</a></li>
-      <li><a href="sponsors.html" class="active">Sponsors</a></li>
+      <li><a href="organisers.html" class="active">Organisers</a></li>
+      <li><a href="sponsors.html">Sponsors</a></li>
       <li><a href="history.html">EMPSEB History</a></li>
     </ul>
 
   </div>
 </nav>
 
-    <!---  <hr> -->
-    <div class="box"> <!--- Line needed to keep contents in a 80% box -->
-          <p class="pserif">
-          Coming soon!
-          </p>
-  
-  	</div>
 
-	  <script>
-		document.addEventListener("DOMContentLoaded", function () {
-  			const hamburger = document.querySelector(".hamburger");
-  			const navRight = document.querySelector(".nav-right");
+	<div class="box">
+	<div class="container">
+		<div class="text">
+      	<p class="pserif">
+        	We are grateful to our generous sponsors for making EMPSEB31 possible.
+			<br> <br>
+    	</p>
+			
+		</div>
+    	<div class="image">
+      		<img
+        	src="img/ESEB.webp"
+        	alt="Logo"
+        	width="100%"
+			height="auto"
+      		/>
 
-  			hamburger.addEventListener("click", function () {
-    			navRight.classList.toggle("active");
-  			});
-		});
-	</script>
+		</div>
 
+    </div>
+    </div>
+	
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.querySelector(".hamburger");
+  const navRight = document.querySelector(".nav-right");
+
+  hamburger.addEventListener("click", function () {
+    navRight.classList.toggle("active");
+  });
+});
+</script>
 
   </body>
+</html>
+
+</body>
 </html>
