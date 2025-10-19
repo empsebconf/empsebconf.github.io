@@ -110,10 +110,10 @@ html {
 
 .pserif b {
   font-family: "Adobe Garamond Pro";
-  font-style: bold;
+  font-style: normal;
   font-weight: bold;
   font-size: 2rem;
-  color: #333;
+  color: #DD8D94;
 }
 
 /* NAVIGATION BAR */
