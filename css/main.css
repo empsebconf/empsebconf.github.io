@@ -107,6 +107,13 @@ html {
   font-weight: normal;
 }
 
+.pserif b {
+  font-family: "Adobe Garamond Pro";
+  font-style: bold;
+  font-weight: bold;
+  font-size: 2.2rem;
+}
+
 /* NAVIGATION BAR */
 .nav-bar {
   font-style: normal;
