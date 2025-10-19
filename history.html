@@ -36,7 +36,7 @@
 	.container {
       display: flex;
       flex-direction: row;
-      align-items: center;
+      align-items: flex-start; /* changed from center to flex-start */
       max-width: 1000px;
       margin: 0 auto;
 	  margin-top: 20px;
@@ -44,17 +44,19 @@
     }
 
     .text {
-      flex: 0 0 35%; /* fixed 70% width */
+      flex: 0 0 35%; /* fixed 35% width */
+	  text-align: left;
     }
 
     .image {
-      flex: 0 0 65%; /* fixed 30% width */
+      flex: 0 0 65%; /* fixed 65% width */
+	  text-align: center;
     }
 
     .image img {
       width: 100%;  /* fill the 30% space */
       height: auto; /* keep proportions */
-      display: block;
+      display: inline-block; /* display aligned in text */
     }
 
 
@@ -156,6 +158,10 @@
 	<div class="container">
 		<div class="text">
       	<p class="pserif">
+		The European Meeting of PhD Students in Evolutionary Biology (EMPSEB) began in Zürich in 1995 as a conference organized by and for PhD students. 
+			Over the past 30 years, it has grown into a truly international gathering, welcoming researchers from around the world. 
+			The conference itself has travelled across Europe, see below for details of our vibrant travelling history.
+			<br><br>
               1995 - Zurich, CH   
 	         <br>
               1996 – Amsterdam, NL   
