@@ -101,6 +101,11 @@ html {
   font-style: normal;
 }
 
+.pserif c {
+  font-family: "Adobe Garamond Pro";
+  color: #DD8D94;
+}
+
 .pserif i {
   font-family: "Adobe Garamond Pro";
   color: #333;
@@ -108,7 +113,21 @@ html {
   font-weight: normal;
 }
 
+.pserif ic {
+  font-family: "Adobe Garamond Pro";
+  font-style: italic;
+  font-weight: normal;
+  color: #DD8D94;
+}
+
 .pserif b {
+  font-family: "Adobe Garamond Pro";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.pserif bc {
   font-family: "Adobe Garamond Pro";
   font-style: normal;
   font-weight: bold;
