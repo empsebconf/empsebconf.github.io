@@ -212,3 +212,19 @@ html {
 .nav-links a.active {
   color: #B5BAA1;   /* hover + active color */
 }
+
+
+
+/* Footer */
+
+footer {
+  margin-top: 40px;
+}
+
+footer .fa {
+  font-size: 28px;          /* make icons larger */
+  color: #DD8D94;           /* set your preferred color */
+  margin: 0 15px;           /* spacing between icons */
+  text-decoration: none;    /* remove underline */
+  transition: transform 0.2s ease, color 0.2s ease;
+}
