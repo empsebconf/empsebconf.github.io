@@ -102,12 +102,12 @@ html {
 }
 
 .pserif c {
-  color: #DD8D94;
+  color: #529796; /* Light blue */
 }
 
 .pserif sc {
   font-family: "Adobe Garamond Pro";
-  color: #DD8D94;
+  color: #DD8D94; /* Light pink for highlights in text */
 }
 
 .pserif i {
