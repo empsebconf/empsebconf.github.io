@@ -77,17 +77,22 @@ footer {
   margin-top: 0px;
 }
 
-footer .fa {
-  font-size: 25px;          /* make icons larger */
-  color: #DD8D94;           /* set your preferred color */
-  margin: 0 14px;           /* spacing between icons */
-  text-decoration: none;    /* remove underline */
+/* Base style for all icons in footer */
+footer .fa, 
+footer .fa-brands {              /* explicitly include brands */
+  font-size: 25px;               /* match size */
+  color: #DD8D94;                /* match your preferred color */
+  margin: 0 14px;                /* spacing between icons */
+  text-decoration: none;         /* remove underline */
   transition: transform 0.2s ease, color 0.2s ease;
 }
 
-footer .fa:hover {
+/* Hover effect for all icons */
+footer .fa:hover,
+footer .fa-brands:hover {
   color: #B5BAA1; 
 }
+
 
 /* --- Mobile styles --- */
 @media screen and (max-width: 768px) {
