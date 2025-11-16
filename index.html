@@ -93,7 +93,50 @@ footer .fa-brands:hover {
   color: #B5BAA1; 
 }
 
+/* Icons for dates */
 
+	.important-title {
+    color: #47bc98;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Layout: 4 columns */
+.dates-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Each date item */
+.date-item {
+    padding: 10px 0;
+}
+
+/* Title row (icon + date) */
+.date-title {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+/* Font Awesome icon styling */
+.icon {
+    font-size: 32px;
+    color: #f16676;
+    margin-right: 10px;
+}
+
+/* Description under date */
+.date-desc {
+    margin-top: 6px;
+    padding-left: 42px; /* aligns under the date text */
+    color: #444;
+}
+
+/* End of icons for dates */
+	
 /* --- Mobile styles --- */
 @media screen and (max-width: 768px) {
       	
@@ -139,11 +182,20 @@ footer .fa-brands:hover {
   .nav-right li {
     margin: 10px 0;
   }
-}
 
-	</style>
 
-  <body>
+/* Icons for dates */
+
+	.dates-grid {
+        grid-template-columns: 1fr;
+    }
+
+/* End of icons for dates */
+} /* End of media screen */
+
+</style>
+
+<body>
 <nav class="nav-bar">
   <div class="nav-container">
     
@@ -162,7 +214,7 @@ footer .fa-brands:hover {
     <!-- Menu links -->
     <ul class="nav-right">
       <li><a href="registration.html">Registration</a></li>
-      <li><a href="keynotes.html">Plenaries & Workshops</a></li>
+      <li><a href="keynotes.html">Plenaries &amp Workshops</a></li>
       <li><a href="programme.html">Programme</a></li>
       <li><a href="venue.html">Venue</a></li>
       <li><a href="organisers.html">Organisers</a></li>
@@ -186,7 +238,45 @@ footer .fa-brands:hover {
 	    	Join us in shaping the future of evolutionary biology!
     		<br> <br>
 
-			Important dates coming November 2026, stay tuned!
+			<sc>Important dates:</sc>
+			<br>
+
+				<div class="dates-grid">
+
+    				<div class="date-item">
+        				<div class="date-title">
+            				<i class="fa-solid fa-hourglass-start icon"></i>
+            				October 10, 2024
+        				</div>
+        				<div class="date-desc">Abstract Submission and Registration Open</div>
+    					</div>
+
+    			<div class="date-item">
+        <div class="date-title">
+            <i class="fa-solid fa-hourglass-end icon"></i>
+            November 29, 2024
+        </div>
+        <div class="date-desc">Abstract Submission Deadline</div>
+    </div>
+
+    <div class="date-item">
+        <div class="date-title">
+            <i class="fa-solid fa-star icon"></i>
+            Mid-December, 2024
+        </div>
+        <div class="date-desc">Communication of Talk & Poster Selection</div>
+    </div>
+
+    <div class="date-item">
+        <div class="date-title">
+            <i class="fa-regular fa-flag icon"></i>
+            January 15, 2025
+        </div>
+        <div class="date-desc">Registration Deadline</div>
+    </div>
+
+</div>
+
 			<br> <br>
     	</p>
 			
