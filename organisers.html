@@ -1,148 +1,132 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>EMPSEB31</title>
-
-    <!-- determines the characters we're using -->
-    <meta charset="utf-8" />
-    <!-- Tab  icon -->
-    <link rel="icon" type="image/png" href="img/EMPSEB31_icon.png" />
-    <!-- appears on google faster  -->
-    <meta name="robots" content="index, follow" />
-    <meta
-      name="description"
-      content="The European Meeting for PhD students in Evolutionary Biology (EMPSEB)"
-    />
-    <!-- link to main stylesheet -->
-    <link rel="stylesheet" type="text/css" href="css/main.css" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-
-    <link rel="stylesheet" href="css/responsive.css" />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-   <link rel="stylesheet" href="css/responsive.css" />  
-
-
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>EMPSEB31 Organisers</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="img/EMPSEB31_icon.png" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
 <style>
-
-	.container {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      width: 100%;
-      margin: 0 auto;
-	  margin-top: 20px;
-      gap: 20px;
-    }
-
-    .text {
-      flex: 0 0 70%; /* fixed 70% width */
-    }
-
-    .image {
-      flex: 0 0 30%; /* fixed 30% width */
-    }
-
-    .image img {
-      width: 95%;  /* fill the 30% space */
-      height: auto; /* keep proportions */
-      display: block;
-    }
-
-
-	/* Hide hamburger on large screens */
-	.hamburger {
-  		display: none;
-  		cursor: pointer;
-  		z-index: 1000;   /* ensure it sits on top */
-  		padding: 10px;
-	}
-
-	.hamburger img {
- 	 	width: 30px;
-  		height: auto;
-	}
-
-/* --- Mobile styles --- */
-	@media screen and (max-width: 768px) {
-      	
-	.container {
-        flex-direction: column;
-        /* text-align: center; optional, looks nicer */
-      }
-
-  	.text, .image {
-    	flex: 0 0 100%; /* full width for both */
-  	}
-
-	.image img {
-      width: 90%;  /* fill the 90% space */
-      height: auto; /* keep proportions */
-      display: block;
-    }
-	
-  .nav-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .nav-logo {
-    margin-bottom: 10px;
-  }
-
-  .hamburger {
-    display: block; /* show hamburger */
-    margin-bottom: 10px;
-  }
-
-  /* make sure the image is visible on mobile */
-  .hamburger img {
-    display: block;
-  }
-
-  .nav-right {
-    display: none; /* hidden by default */
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  .nav-right.active {
-    display: flex; /* show when toggled */
-  }
-
-  .nav-right li {
-    margin: 10px 0;
-  }
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #0b0e1a;
+    color: #fff;
 }
 
-	</style>
+.nav-bar {
+    background: #111;
+}
 
-  <body>
+.nav-bar a { color: #fff; text-decoration: none; }
+
+.system {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    margin: 50px auto;
+}
+
+.sun {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px; height: 80px;
+    background: gold;
+    border-radius: 50%;
+    box-shadow: 0 0 25px 10px gold;
+}
+
+.orbit {
+    position: absolute;
+    top: 50%; left: 50%;
+    border-radius: 50%;
+    border: 2px dashed rgba(255,255,255,0.2);
+    animation: spin linear infinite;
+}
+
+.orbit-A {
+    width: 300px; height: 300px;
+    margin: -150px 0 0 -150px;
+    box-shadow: 0 0 12px 4px rgba(255, 182, 193, 0.6);
+    border-color: rgba(255, 182, 193, 0.4);
+    animation-duration: 18s;
+}
+
+.orbit-B {
+    width: 450px; height: 450px;
+    margin: -225px 0 0 -225px;
+    box-shadow: 0 0 12px 4px rgba(65, 105, 225, 0.7);
+    border-color: rgba(65, 105, 225, 0.5);
+    animation-duration: 30s;
+}
+
+@keyframes spin { 100% { transform: rotate(360deg); } }
+
+.person {
+    position: absolute;
+    width: 60px; height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    border: 3px solid #fff;
+    transition: transform 0.3s;
+}
+
+.person img {
+    width: 100%; height: 100%; object-fit: cover;
+}
+
+/* Glow colors */
+.person-A { box-shadow: 0 0 12px rgba(255,182,193,0.9); }
+.person-B { box-shadow: 0 0 12px rgba(65,105,225,0.9); }
+
+/* Slide-out info box */
+.info-box {
+    position: absolute;
+    left: 70px; /* right of circle */
+    top: 0;
+    width: 250px;
+    background: rgba(0,0,0,0.9);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    z-index: 100;
+}
+
+.person:hover .info-box {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+}
+
+/* Mobile fallback: show info below circle */
+@media screen and (max-width: 768px) {
+    .system { width: 100%; height: auto; margin: 20px 0; }
+    .orbit { display: none; }
+    .person { position: relative; margin: 20px auto; display: block; }
+    .info-box { position: relative; left: 0; top: 0; transform: none; opacity: 1; pointer-events: auto; width: 90%; margin: 10px auto; }
+}
+</style>
+</head>
+<body>
+
 <nav class="nav-bar">
   <div class="nav-container">
-    
-    <!-- Logo (always visible, on top) -->
     <div class="nav-logo">
       <a href="index.html" class="active">
         <img src="img/Logo-EMPSEB31.png" width="65" height="auto" alt="EMPSEB31 Logo">
       </a>
     </div>
-
-    <!-- Hamburger (only on small screens) -->
     <div class="hamburger" onclick="toggleMenu()">
       <img src="img/MenuBar.png" alt="Menu" width="20" height="auto">
     </div>
-
-    <!-- Menu links -->
     <ul class="nav-right">
       <li><a href="registration.html">Registration</a></li>
       <li><a href="keynotes.html">Plenaries & Workshops</a></li>
@@ -152,222 +136,88 @@
       <li><a href="sponsors.html">Sponsors</a></li>
       <li><a href="history.html">EMPSEB History</a></li>
     </ul>
-
   </div>
 </nav>
 
-<div class="box">
-	<div class="container">
-		<div class="image">
-      		<img
-        	src="img/Organisers/Zorimar.png"
-        	alt="Logo"
-        	width="100%"
-			height="auto"
-      		/>
+<div class="system">
+  <div class="sun"></div>
 
-		</div>
-	<div class="container">
-		<div class="image">
-      		<img
-        	src="img/Organisers/Kevin.png"
-        	alt="Logo"
-        	width="100%"
-			height="auto"
-      		/>
-
-		</div>
-		
-		<div class="text">
-      	<p class="pserif">
-        	<c>Kevin Hsiung (he/him)</c>
-    		<br>
-			<i><sc>PhD Student at the Leibniz Institute for the Analysis of Biodiversity Change, Germany.</sc></i>
-			<br>
-			I am interested in the evolution of sex chromosomes and the expression of sex, as well as how that relates to sexual conflict and the evolution of sex specific traits. 
-			I am lucky to study this in charismatic Syngnathidae fish (the family of seahorses, seadragons, and pipefish), which have uniquely evolved male pregnancy.
-
-			<br><br>
-			I love swimming peacefully in lakes.
-			<br><br>
-    	</p>
-			
-		</div>
-    </div> <!-- Container closure -->
-
-		<div class="container">
-		<div class="image">
-      		<img
-        	src="img/Organisers/Afra.png"
-        	alt="Logo"
-        	width="100%"
-			height="auto"
-      		/>
-
-		</div>
-		
-		<div class="text">
-      	<p class="pserif">
-        	<c>Afra Salazar</c>
-    		<br>
-			<i><sc>PhD student in Life Sciences at Lausanne University, Switzerland.</sc></i>
-			<br>
-			I work on multilevel selection theory, evolutionary individuality, and microbial ecology and evolution. 
-			I aim to combine mathematical models, computer simulations, experiments, and philosophy in my research projects.
-			<br><br>
-    	</p>
-			
-		</div>
-    </div> <!-- Container closure -->
-		<div class="text">
-      	<p class="pserif">
-        	<c>Zorimar Vilella Pacheco</c>
-    		<br>
-			<sc>PhD student in Evolutionary Biology, KU Leuven, Belgium.</sc>
-			<br>
-			I study developmental plasticity using the common water flea, Daphnia magna. 
-			My work explores how gene regulatory networks drive plastic responses across generations, using tools from genomics and epigenetics to tackle questions in evolutionary and developmental biology.
-			<br><br>
-			I'm originally from Puerto Rico, where early experiences in diverse ecosystems sparked my interest in how organisms respond to their environment.
-			Outside the lab, I enjoy taking nature walks and exploring new places to eat.
-			<br><br>
-    	</p>
-			
-		</div>
+  <!-- Orbit A: Veera, Erica, Kevin, Gokul -->
+  <div class="orbit orbit-A">
+    <div class="person person-A" style="top:0%; left:50%;">
+      <img src="img/Organisers/Veera.png" alt="Veera">
+      <div class="info-box">
+        <strong>Veera Schroderus</strong><br>
+        PhD student in Evolutionary Biology, University of Turku, Finland.<br><br>
+        My main research interest is in the evolution of sociality and its impact on health.
+        I explore how kin networks and other social connections have influenced the well-being of aging humans throughout history by combining evolutionary theory and population data. 
+        Besides my research, I’m interested in science communication and internationality. In my free time, I love doing visual arts, spending time in nature, and board games.
+      </div>
     </div>
+    <div class="person person-A" style="top:50%; left:100%;">
+      <img src="img/Organisers/Erica.png" alt="Erica">
+      <div class="info-box">
+        <strong>Erica Winslott</strong><br>
+        PhD student in Evolutionary Biology at Lund University, Sweden.<br><br>
+        I study selection, genetic variation and local adaptation in wild free-ranging beetle populations, of the green tortoise beetle <i>Cassida viridis</i>, in Sweden. I hope to add knowledge on why evolutionary predictions with the amount of genetic variation and strength of selection do not always match the observed outcomes. In my free time, I enjoy working with stoneware clay.
+      </div>
+    </div>
+    <div class="person person-A" style="top:100%; left:50%;">
+      <img src="img/Organisers/Kevin.png" alt="Kevin">
+      <div class="info-box">
+        <strong>Kevin Hsiung</strong><br>
+        PhD Student at the Leibniz Institute for the Analysis of Biodiversity Change, Germany.<br><br>
+        I am interested in the evolution of sex chromosomes and the expression of sex, as well as how that relates to sexual conflict and the evolution of sex-specific traits. I study Syngnathidae fish (seahorses, seadragons, pipefish). I love swimming peacefully in lakes.
+      </div>
+    </div>
+    <div class="person person-A" style="top:50%; left:0%;">
+      <img src="img/Organisers/Gokul.png" alt="Gokul">
+      <div class="info-box">
+        <strong>Gokul Bhaskaran</strong><br>
+        PhD student at Jagiellonian University, Krakow, Poland.<br><br>
+        My research focuses on experimental evolution in bank voles, exploring how artificial selection for predatory behaviour drives changes in aggression, physiology, and other correlated traits. I am also interested in science communication, teaching, and event organisation.
+      </div>
+    </div>
+  </div>
 
-		<div class="container">
-		<div class="image">
-      		<img
-        	src="img/Organisers/Kartikey.png"
-        	alt="Logo"
-        	width="100%"
-			height="auto"
-      		/>
-
-		</div>
-		
-		<div class="text">
-      	<p class="pserif">
-        	<c>Kartikey Awasthi (he/him)</c>
-    		<br>
-			<i><sc>PhD student at the University of Freiburg, Germany.</sc></i>
-			<br>
-			I am a theoretician, studying the evolution of social behaviours using modelling techniques like adaptive dynamics and agent-based simulations. 
-			I am currently modelling non-reproductive sexual behaviours.
-			<br><br>
-			I am a big nerd about anything; you can talk to me about science, linguistics, mythology, food, video games, and pop culture, and I will happily converse! 
-			I love dancing and pretending I can sing.
-			<br><br>
-    	</p>
-			
-		</div>
-    </div> <!-- Container closure -->
-
-	<div class="container">
-		<div class="image">
-      		<img
-        	src="img/Organisers/Veera.png"
-        	alt="Logo"
-        	width="100%"
-			height="auto"
-      		/>
-
-		</div>
-		
-		<div class="text">
-      	<p class="pserif">
-        	<c>Veera Schroderus</c>
-    		<br>
-			<i><sc>PhD student in Evolutionary Biology, University of Turku, Finland.</sc></i>
-			<br>
-			My main research interest is in the evolution of sociality and its impact on health.
-			I explore how kin networks and other social connections have influenced the well-being of aging humans throughout history by combining evolutionary theory and population data. 
-
-			<br><br>
-			Besides my research, I’m interested in science communication and internationality. 
-			In my free time, I love taking deep dives into different phenomena with scientific curiosity, as well as doing visual arts, spending time in nature, and board games.
-			<br><br>
-    	</p>
-			
-		</div>
-    </div> <!-- Container closure -->
-
-	<div class="container">
-		<div class="image">
-      		<img
-        	src="img/Organisers/Erica.png"
-        	alt="Logo"
-        	width="100%"
-			height="auto"
-      		/>
-
-		</div>
-		
-		<div class="text">
-      	<p class="pserif">
-        	<c>Erica Winslott (she/her)</c>
-    		<br>
-			<i><sc>PhD student in Evolutionary Biology at Lund University, Sweden.</sc></i>
-			<br>
-			I am studying selection, genetic variation and local adaptation in wild free-ranging beetle populations, of the green tortoise beetle <i>Cassida viridis</i>, in Sweden. 
-			I hope to add knowledge on why evolutionary predictions with the amount of genetic variation and strength of selection do not always match the observed outcomes.
-
-			<br><br>
-			I grew up in the middle of nowhere, so I’ve always loved escaping the city and finding peace in nature. 
-			I also like working with stoneware clay, especially when I can recreate cute insects and animals.
-			<br><br>
-    	</p>
-			
-		</div>
-    </div> <!-- Container closure -->
-
-	<div class="container">
-		<div class="image">
-      		<img
-        	src="img/Organisers/Gokul.png"
-        	alt="Logo"
-        	width="100%"
-			height="auto"
-      		/>
-
-		</div>
-		
-		<div class="text">
-      	<p class="pserif">
-        	<c>Gokul Bhaskaran (he/him)</c>
-    		<br>
-			<i><sc>PhD student at Jagiellonian University, Krakow, Poland.</sc></i>
-			<br>
-			My research focuses on experimental evolution in bank voles, exploring how artificial selection for predatory behaviour drives changes in aggression, physiology, and other correlated traits.
-
-			<br><br>
-			Beyond research, I am interested in science communication, public relations, teaching, event organisation, and cricket analysis.
-			<br><br>
-    	</p>
-			
-		</div>
-    </div> <!-- Container closure -->
-
-
-	
-    
+  <!-- Orbit B: Kartikey, Zorimar, Afra -->
+  <div class="orbit orbit-B">
+    <div class="person person-B" style="top:0%; left:50%;">
+      <img src="img/Organisers/Kartikey.png" alt="Kartikey">
+      <div class="info-box">
+        <strong>Kartikey Awasthi</strong><br>
+        PhD student at the University of Freiburg, Germany.<br><br>
+        I am a theoretician studying the evolution of social behaviours using modelling techniques. I am currently modelling non-reproductive sexual behaviours. I am a big nerd about anything; you can talk to me about science, linguistics, mythology, food, video games, and pop culture. I love dancing and pretending I can sing.
+      </div>
+    </div>
+    <div class="person person-B" style="top:50%; left:100%;">
+      <img src="img/Organisers/Zorimar.png" alt="Zorimar">
+      <div class="info-box">
+        <strong>Zorimar Vilella Pacheco</strong><br>
+        PhD student in Evolutionary Biology, KU Leuven, Belgium.<br><br>
+        I study developmental plasticity using Daphnia magna. My work explores gene regulatory networks driving plastic responses across generations. Outside the lab, I enjoy taking nature walks and exploring new places to eat.
+      </div>
+    </div>
+    <div class="person person-B" style="top:100%; left:50%;">
+      <img src="img/Organisers/Afra.png" alt="Afra">
+      <div class="info-box">
+        <strong>Afra Salazar</strong><br>
+        PhD student in Life Sciences at Lausanne University, Switzerland.<br><br>
+        I work on multilevel selection theory, evolutionary individuality, and microbial ecology and evolution. I aim to combine mathematical models, simulations, experiments, and philosophy in my research projects.
+      </div>
+    </div>
+  </div>
 </div>
-	
-	
+
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   const hamburger = document.querySelector(".hamburger");
   const navRight = document.querySelector(".nav-right");
-
   hamburger.addEventListener("click", function () {
     navRight.classList.toggle("active");
   });
 });
 </script>
-
-  </body>
-</html>
 
 </body>
 </html>
