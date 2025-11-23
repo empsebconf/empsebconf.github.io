@@ -50,13 +50,24 @@
 
 /* Detault parameters */
 
+* {
+  font-family: "Source Sans Pro";
+  font-weight: 400;
+  box-sizing: border-box;
+  font-size: rem;
+  text-decoration: none;
+  color: black;
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: auto;
   margin-bottom: 0px;
   width: 100%;
   padding: 0;
   width: 100%;
-  font-family: "Source Sans Pro", "Helvetica", "Sans-Serif", "EB Garamond";
+  font-family: "Source Sans Pro", "Helvetica", "Sans-Serif";
   background-color: #FEFCF6; /* full page background */
 }
 
@@ -217,5 +228,4 @@ a:hover {
 footer .fa:hover {
   color: #B5BAA1; 
 }
-
 
