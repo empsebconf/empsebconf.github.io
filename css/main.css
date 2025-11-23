@@ -77,10 +77,10 @@ html {
 }
 
 /* Anchors */
-a {
+
+.aintext {
   font-family: "Adobe Garamond Pro";
   color: #DD8D94; /* Light pink for highlights in text */
-  font-weight: 600;
 }
 
 a:hover {
