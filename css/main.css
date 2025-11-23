@@ -50,24 +50,13 @@
 
 /* Detault parameters */
 
-* {
-  font-family: "Source Sans Pro";
-  font-weight: 400;
-  box-sizing: border-box;
-  font-size: rem;
-  text-decoration: none;
-  color: black;
-  font-weight: normal;
-  font-style: normal;
-}
-
 body {
   margin: auto;
   margin-bottom: 0px;
   width: 100%;
   padding: 0;
   width: 100%;
-  font-family: "Source Sans Pro", "Helvetica", "Sans-Serif";
+  font-family: "Source Sans Pro", "Helvetica", "Sans-Serif", "EB Garamond";
   background-color: #FEFCF6; /* full page background */
 }
 
