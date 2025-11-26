@@ -224,6 +224,11 @@ a:hover {
   color: #B5BAA1;   /* hover + active color */
 }
 
+.header-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
 footer .fa:hover {
   color: #B5BAA1; 
