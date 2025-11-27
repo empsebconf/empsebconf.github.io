@@ -225,17 +225,9 @@ a:hover {
 }
 
 .header-img {
-  width: 50%;
+  width: 30%;
   height: auto;
   display: block;
-}
-.site-header {
-  background-image: url('img/Logotype(2) 2.png');
-  background-size: cover;           /* fills the header */
-  background-position: center center; /* centers the image */
-  background-repeat: no-repeat;     /* prevents tiling */
-  width: 50%;
-  height: 250px;                    /* adjust as needed */
 }
 footer .fa:hover {
   color: #B5BAA1; 
