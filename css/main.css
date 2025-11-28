@@ -224,10 +224,8 @@ a:hover {
   color: #B5BAA1;   /* hover + active color */
 }
 
-.header-img {
-  width: 30%;
-  height: auto;
-  display: block;
+.header {
+  background-color: transparent;
 }
 footer .fa:hover {
   color: #B5BAA1; 
