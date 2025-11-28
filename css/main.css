@@ -229,18 +229,3 @@ footer .fa:hover {
 }
 
 /* ----- Link defaults: underline and inherit font/size/colour ----- */
-a,
-a:link,
-a:visited {
-  text-decoration: underline;
-  color: inherit;          /* use surrounding text color */
-  font-family: inherit;    /* match surrounding font */
-  font-size: inherit;      /* match surrounding font size */
-  font-weight: inherit;
-}
-
-/* keep hover/active behaviour (you already had a hover colour) */
-a:hover,
-a:active {
-  text-decoration: underline; /* ensure hover still has underline */
-  color: #B5BAA1;             /* or keep your site's hover color */
