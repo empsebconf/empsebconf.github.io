@@ -55,7 +55,6 @@
   font-weight: 400;
   box-sizing: border-box;
   font-size: rem;
-  text-decoration: none;
   color: black;
   font-weight: normal;
   font-style: normal;
@@ -234,7 +233,6 @@ a,
 a:link,
 a:visited {
   text-decoration: underline;
-  text-decoration-thickness: auto; /* optional: consistent thickness across browsers */
   color: inherit;          /* use surrounding text color */
   font-family: inherit;    /* match surrounding font */
   font-size: inherit;      /* match surrounding font size */
@@ -246,27 +244,3 @@ a:hover,
 a:active {
   text-decoration: underline; /* ensure hover still has underline */
   color: #B5BAA1;             /* or keep your site's hover color */
-}
-
-/* If you absolutely must keep the global * { text-decoration: none; } rule,
-   force the link underline with higher specificity (less ideal): */
-*:not(nav) a {
-  text-decoration: underline;
-}
-
-/* If nav should remain without underline, keep its explicit rule */
-.nav-left a,
-.nav-right a,
-.nav-links a,
-.nav-open a {
-  text-decoration: none; /* if you want nav to be NOT underlined */
-}
-
-/* If you want nav links to match font too, add font inheritance */
-.nav-left a,
-.nav-right a {
-  font-family: inherit;
-  font-size: inherit;
-  color: #316669; /* keep your nav color */
-}
-
