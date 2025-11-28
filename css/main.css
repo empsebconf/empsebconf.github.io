@@ -233,7 +233,7 @@ a,
 a:link,
 a:visited {
   text-decoration: underline;
-  color: #DD8D94;          /* use surrounding text color */
+  color: inherit;          /* use surrounding text color */
   font-family: inherit;    /* match surrounding font */
   font-size: inherit;      /* match surrounding font size */
   font-weight: inherit;
