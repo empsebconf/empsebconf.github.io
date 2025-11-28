@@ -82,15 +82,8 @@ html {
   font-family: "Adobe Garamond Pro";
   color: #DD8D94; /* Light pink for highlights in text */
 }
-
 a:hover {
   color: #B5BAA1;
-}
-.a {
-  text-decoration: underline;   
-  color: inherit;              
-  font-size: inherit;           
-  font-family: inherit; 
 }
 .box {
   margin-left: 15%;
@@ -235,3 +228,45 @@ a:hover {
 footer .fa:hover {
   color: #B5BAA1; 
 }
+
+/* ----- Link defaults: underline and inherit font/size/colour ----- */
+a,
+a:link,
+a:visited {
+  text-decoration: underline;
+  text-decoration-thickness: auto; /* optional: consistent thickness across browsers */
+  color: inherit;          /* use surrounding text color */
+  font-family: inherit;    /* match surrounding font */
+  font-size: inherit;      /* match surrounding font size */
+  font-weight: inherit;
+}
+
+/* keep hover/active behaviour (you already had a hover colour) */
+a:hover,
+a:active {
+  text-decoration: underline; /* ensure hover still has underline */
+  color: #B5BAA1;             /* or keep your site's hover color */
+}
+
+/* If you absolutely must keep the global * { text-decoration: none; } rule,
+   force the link underline with higher specificity (less ideal): */
+*:not(nav) a {
+  text-decoration: underline;
+}
+
+/* If nav should remain without underline, keep its explicit rule */
+.nav-left a,
+.nav-right a,
+.nav-links a,
+.nav-open a {
+  text-decoration: none; /* if you want nav to be NOT underlined */
+}
+
+/* If you want nav links to match font too, add font inheritance */
+.nav-left a,
+.nav-right a {
+  font-family: inherit;
+  font-size: inherit;
+  color: #316669; /* keep your nav color */
+}
+
