@@ -124,14 +124,38 @@ header {
   .nav-right li {
     margin: 10px 0;
   }
+.update-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  font-weight: 800;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  border-radius: 10px;
+  color: white;
+  background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
+  background-size: 400%;
+  animation: rainbowShift 4s linear infinite, glowPulse 1.8s ease-in-out infinite;
+  box-shadow: 0 0 12px rgba(255,255,255,0.7);
+}
+
+@keyframes rainbowShift {
+  0% { background-position: 0%; }
+  100% { background-position: 400%; }
+}
+
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 10px rgba(255,255,255,0.7); }
+  50% { box-shadow: 0 0 20px rgba(255,255,255,1); }
+}
 
 	</style>
 	  
-<header style="display:flex; justify-content:center;">
+
+  <body>
+	  <header style="display:flex; justify-content:center;">
   <img src="img/Logotype2 (2).png" style="max-width:20%; height:auto;">
 </header>
 	  
-  <body>
 <nav class="nav-bar">
   <div class="nav-container">
     
@@ -172,7 +196,7 @@ header {
 		  In addition, participants are encouraged to present their work as a traditional poster or as a creative alternative presentation. 
 		  <sc>There will be prizes for best performance in all three categories!</sc>
 		  <br><br>
-		  <sc> We are accepting abstracts! </sc> <a href="https://forms.gle/nXn9zHC6yjbmMcnL8" style="color:#DD8D94; text-decoration:underline; font-family:inherit;">Click here and submit your abstract now!</a> 
+		  <span class="update-badge">!NEW!</span> <sc> We are accepting abstracts! </sc> <a href="https://forms.gle/nXn9zHC6yjbmMcnL8" style="color:#3d625c; text-decoration:underline; font-family:inherit;">Click here and submit your abstract now!</a> 
 		  <br><br>
 			ESEB is offering our participants the <a href="https://eseb.org/call-conference-travel-award/" style="color:#DD8D94; text-decoration:underline; font-family:inherit;">Conference Travel Award 2026 </a> to support their travel expenses! Check your eligibility 
 			  and how to apply <a href="https://eseb.org/prizes-funding/conference-travel-award/" style="color:#DD8D94; text-decoration:underline;font-family:inherit;">here</a>! Remember, the deadline for applying for this travel grant is <sc>30 January, 2026</sc>
