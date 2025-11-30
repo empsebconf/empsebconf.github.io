@@ -169,7 +169,7 @@ a:hover {
   border-bottom: 0px solid #d5d5d5;
   position: sticky;
   top: 142px;
-  z-index: 9998;
+  z-index: 999998;
 }
 
 .nav-container {
