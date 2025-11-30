@@ -69,6 +69,11 @@ body {
   font-family: "Source Sans Pro", "Helvetica", "Sans-Serif";
   background-color: #FEFCF6; /* full page background */
 }
+header {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
 
 /* GENERAL */
 html {
