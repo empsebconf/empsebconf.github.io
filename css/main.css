@@ -153,7 +153,7 @@ a:hover {
   text-align: right;
   padding-bottom: 5px;
   padding-top: 20px;
-  margin-top: 0px; /* Space between navegation bar and top of body*/
+  margin-top: 0px; /* Space between navigation bar and top of body*/
   list-style: none;
   font-weight: 500;
   font-size: large;
@@ -222,7 +222,7 @@ a:hover {
 }
 
 .header {
-  background-color: transparent;
+  background-color: #FEFCF6;
 }
 footer .fa:hover {
   color: #B5BAA1; 
