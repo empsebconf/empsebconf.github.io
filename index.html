@@ -208,6 +208,31 @@ header {
 /* End of icons for dates */
 } /* End of media screen */
 
+	.update-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  font-weight: 800;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  border-radius: 10px;
+  color: white;
+  background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
+  background-size: 400%;
+  animation: rainbowShift 4s linear infinite, glowPulse 1.8s ease-in-out infinite;
+  box-shadow: 0 0 12px rgba(255,255,255,0.7);
+}
+
+@keyframes rainbowShift {
+  0% { background-position: 0%; }
+  100% { background-position: 400%; }
+}
+
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 10px rgba(255,255,255,0.7); }
+  50% { box-shadow: 0 0 20px rgba(255,255,255,1); }
+}
+
+
 </style>
 	  
 <header style="display:flex; justify-content:center;">
@@ -257,6 +282,7 @@ header {
 	    	<br>
 			Join us in shaping the future of evolutionary biology!
     		<br> <br>
+			<span class="update-badge">UPDATE!</span> Check out the <sc>"Registration"</sc> page for submitting an abstract now! 
 		</p>
 			
 		</div>
