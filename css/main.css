@@ -64,13 +64,13 @@ body {
   margin: auto;
   margin-bottom: 0px;
   width: 100%;
-  padding: 0;
+  padding-top: 100px;
   width: 100%;
   font-family: "Source Sans Pro", "Helvetica", "Sans-Serif";
   background-color: #FEFCF6; /* full page background */
 }
 header {
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 9999;
 }
