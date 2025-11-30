@@ -73,6 +73,7 @@ header {
     position: fixed;
     top: 0;
     z-index: 9999;
+	background-color: #FEFCF6;
 }
 
 /* GENERAL */
@@ -167,8 +168,8 @@ a:hover {
   background-color: #fefaf1;
   border-bottom: 0px solid #d5d5d5;
   position: sticky;
-  top: 0;
-  z-index: 1;
+  top: 200px;
+  z-index: 9998;
 }
 
 .nav-container {
