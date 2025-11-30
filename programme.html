@@ -73,9 +73,14 @@
 
 /* --- Mobile styles --- */
 @media screen and (max-width: 768px) {
-      	
-	.container {
+header {
+    display: none !important;
+    position: static !important;  /* reset fixed positioning */
+    height: 0 !important;         /* remove height so it doesn't reserve space */
+}
+	.textimgcontainer {
         flex-direction: column;
+        /* text-align: center; */
       }
 
   	.text, .image {
@@ -94,6 +99,10 @@
   .hamburger {
     display: block; /* show hamburger */
     margin-bottom: 10px;
+  }
+  .nav-bar {
+  position: sticky;
+  top: 0;
   }
 
   /* make sure the image is visible on mobile */
@@ -115,8 +124,6 @@
   .nav-right li {
     margin: 10px 0;
   }
-}
-
 	</style>
 	  
 <header style="display:flex; justify-content:center;">
