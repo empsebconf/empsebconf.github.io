@@ -148,58 +148,59 @@ footer .fa-brands:hover {
 	
 /* --- Mobile styles --- */
 @media screen and (max-width: 768px) {
-header {
-    display: none !important;
-    position: static !important;  /* reset fixed positioning */
-    height: 0px;         /* remove height so it doesn't reserve space */
-}
+	header {
+    	display: none;
+	}
+
 	.textimgcontainer {
         flex-direction: column;
         /* text-align: center; */
-      }
+    }
 
   	.text, .image {
     	flex: 0 0 100%;           /* full width for both */
   	}
+
+	.nav-bar {
+    	position: sticky;
+    	top: 0;
+    	z-index: 999;
+  	}
 	
-  .nav-container {
-    flex-direction: column;
-    align-items: center;
-  }
+  	.nav-container {
+    	flex-direction: column;
+    	align-items: center;
+  	}
 
-  .nav-logo {
-    margin-bottom: 10px;
-  }
+  	.nav-logo {
+    	margin-bottom: 10px;
+  	}
 
-  .hamburger {
-    display: block; /* show hamburger */
-    margin-bottom: 10px;
-  }
-  .nav-bar {
-  position: sticky;
-  top: 0;
-  }
+  	.hamburger {
+    	display: block; /* show hamburger */
+    	margin-bottom: 10px;
+ 	}
 
-  /* make sure the image is visible on mobile */
-  .hamburger img {
-    display: block;
-  }
+ 	 /* make sure the image is visible on mobile */
+ 	 .hamburger img {
+    	display: block;
+ 	 }
 
-  .nav-right {
-    display: none; /* hidden by default */
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
+  	.nav-right {
+    	display: none; /* hidden by default */
+    	flex-direction: column;
+    	align-items: center;
+    	width: 100%;
+  	}
 
-  .nav-right.active {
-    display: flex; /* show when toggled */
-  }
+  	.nav-right.active {
+    	display: flex; /* show when toggled */
+  	}
 
-  .nav-right li {
-    margin: 10px 0;
-  }
-/* Icons for dates */
+  	.nav-right li {
+    	margin: 10px 0;
+  	}
+	/* Icons for dates */
 
 	.dates-grid {
         grid-template-columns: 1fr;
@@ -208,7 +209,7 @@ header {
 /* End of icons for dates */
 } /* End of media screen */
 
-	.update-badge {
+.update-badge {
   display: inline-block;
   padding: 6px 14px;
   font-weight: 800;
