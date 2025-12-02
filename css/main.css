@@ -64,16 +64,10 @@ body {
   margin: auto;
   margin-bottom: 0px;
   width: 100%;
-  padding-top: 160px;
+  padding-top: 0px;
   width: 100%;
   font-family: "Source Sans Pro", "Helvetica", "Sans-Serif";
   background-color: #FEFCF6; /* full page background */
-}
-header {
-    position: fixed;
-    top: 0;
-    z-index: 9999;
-	background-color: #FEFCF6;
 }
 
 /* GENERAL */
@@ -90,6 +84,7 @@ html {
 a:hover {
   color: #B5BAA1;
 }
+
 .box {
   margin-left: 15%;
   margin-right: 15%;
@@ -168,8 +163,8 @@ a:hover {
   background-color: #fefaf1;
   border-bottom: 0px solid #d5d5d5;
   position: sticky;
-  top: 142px;
-  z-index: 9998;
+  top: 0px;
+  z-index: 9999;
 }
 
 .nav-container {
