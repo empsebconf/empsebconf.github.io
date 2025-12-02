@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EMPSEB 31</title>
+
+    <!-- determines the characters we're using -->
+    <meta charset="utf-8" />
+    <!-- Tab  icon -->
+    <link rel="icon" type="image/png" href="img/EMPSEB31_icon.png" />
+    <!-- appears on google faster  -->
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="description"
+      content="The European Meeting for PhD students in Evolutionary Biology (EMPSEB)"
+    />
+    <!-- link to main stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+	/>
+
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+      rel="stylesheet"
+    /> 
+
+<style>
+
+	.textimgcontainer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+      margin: 0 auto;
+	  margin-top: 20px;
+      gap: 20px;
+    }
+
+    .text {
+      flex: 0 0 70%; /* fixed 70% width */
+    }
+
+	.textdates {
+      flex: 0 0 100%; /* fixed 70% width */
+    }
+
+    .image {
+      flex: 0 0 30%; /* fixed 30% width */
+    }
+
+    .image img {
+      width: 100%;  /* fill the 30% space */
+      height: auto; /* keep proportions */
+      display: block;
+    }
+
+
+/* Hide hamburger on large screens */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  z-index: 1000;   /* ensure it sits on top */
+  padding: 10px;
+}
+
+.hamburger img {
+  width: 30px;
+  height: auto;
+}
+
+/* Footer */
+
+footer {
+  margin-top: 0px;
+}
+
+/* Base style for all icons in footer */
+footer .fa, 
+footer .fa-brands {              /* explicitly include brands */
+  font-size: 25px;               /* match size */
+  color: #DD8D94;                /* match your preferred color */
+  margin: 0 14px;                /* spacing between icons */
+  text-decoration: none;         /* remove underline */
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Hover effect for all icons */
+footer .fa:hover,
+footer .fa-brands:hover {
+  color: #B5BAA1; 
+}
+
+/* Icons for dates */
+
+/* Layout: 4 columns */
+.dates-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Each date item */
+.date-item {
+    padding: 10px 0;
+}
+
+/* Title row (icon + date) */
+.date-title {
+    display: flex;
+    align-items: center;
+    font-size: 2rem; /* From psrif */
+  	line-height: 1.5em;
+ 	color: #333;
+  	font-family: "Adobe Garamond Pro";
+  	width: 100%;
+  	font-weight: 500;
+  	font-style: normal;
+}
+
+/* Font Awesome icon styling */
+.icon {
+    font-size: 25px;
+    color: #6B2A2F;
+    margin-right: 10px;
+}
+
+/* Description under date */
+.date-desc {
+    margin-top: 6px;
+    padding-left: 0px; /* aligns under the date text */
+	font-size: 2rem; /* From psrif */
+  	line-height: 1.5em;
+ 	color: #DD8D94;
+  	font-family: "Adobe Garamond Pro";
+  	width: 100%;
+  	font-weight: normal;
+  	font-style: italic;
+}
+
+/* End of icons for dates */
+	
+/* --- Mobile styles --- */
+@media screen and (max-width: 768px) {
+	header {
+    	display:none;
+	}
+
+	.textimgcontainer {
+        flex-direction: column;
+        /* text-align: center; */
+    }
+
+  	.text, .image {
+    	flex: 0 0 100%;           /* full width for both */
+  	}
+
+	.nav-bar {
+    	position: sticky;
+    	top: 0;
+    	z-index: 999;
+  	}
+	
+  	.nav-container {
+    	flex-direction: column;
+    	align-items: center;
+  	}
+
+  	.nav-logo {
+    	margin-bottom: 10px;
+  	}
+
+  	.hamburger {
+    	display: block; /* show hamburger */
+    	margin-bottom: 10px;
+ 	}
+
+ 	 /* make sure the image is visible on mobile */
+ 	 .hamburger img {
+    	display: block;
+ 	 }
+
+  	.nav-right {
+    	display: none; /* hidden by default */
+    	flex-direction: column;
+    	align-items: center;
+    	width: 100%;
+  	}
+
+  	.nav-right.active {
+    	display: flex; /* show when toggled */
+  	}
+
+  	.nav-right li {
+    	margin: 10px 0;
+  	}
+	/* Icons for dates */
+
+	.dates-grid {
+        grid-template-columns: 1fr;
+    }
+
+/* End of icons for dates */
+} /* End of media screen */
+
+.update-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  font-weight: 800;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  border-radius: 10px;
+  color: white;
+  background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
+  background-size: 400%;
+  animation: rainbowShift 4s linear infinite, glowPulse 1.8s ease-in-out infinite;
+  box-shadow: 0 0 12px rgba(255,255,255,0.7);
+}
+
+@keyframes rainbowShift {
+  0% { background-position: 0%; }
+  100% { background-position: 400%; }
+}
+
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 10px rgba(255,255,255,0.7); }
+  50% { box-shadow: 0 0 20px rgba(255,255,255,1); }
+}
+
+
+</style>
+
+<body>
+	<header style="display:flex; justify-content:center;">
+  <img src="img/Logotype2 (2).png" style="max-width:20%; height:auto;">
+</header>
+<nav class="nav-bar">
+  <div class="nav-container">
+    
+    <!-- Logo (always visible, on top) -->
+    <div class="nav-logo">
+      <a href="index.html" class="active">
+        <img src="img/Logo-EMPSEB31.png" width="65" height="auto" alt="EMPSEB31 Logo">
+      </a>
+    </div>
+
+    <!-- Hamburger (only on small screens) -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <img src="img/MenuBar.png" alt="Menu" width="20" height="auto">
+    </div>
+
+    <!-- Menu links -->
+    <ul class="nav-right">
+      <li><a href="registration.html">Registration</a></li>
+      <li><a href="keynotes.html">Plenaries &amp Workshops</a></li>
+      <li><a href="programme.html">Programme</a></li>
+      <li><a href="venue.html">Venue</a></li>
+      <li><a href="organisers.html">Organisers</a></li>
+      <li><a href="sponsors.html">Sponsors</a></li>
+      <li><a href="history.html">EMPSEB History</a></li>
+    </ul>
+
+  </div>
+</nav>
+
+
+<div class="box">
+	<div class="textimgcontainer">
+		<div class="text">
+      	<p class="pserif">
+        	The European Meeting for PhD students in Evolutionary Biology (EMPSEB) is a student-led annual conference that brings together passionate PhD researchers from around the world to share ideas, present cutting-edge science, and build lasting collaborations. 
+			Since 1995, EMPSEB has been a cornerstone event empowering the next generation of evolutionary biologists. 
+	    	<br> <br>
+
+        	The upcoming edition, EMPSEB 31, will take place at the Ahorn Hotel am Fichtelberg in <sc>Oberwiesenthal, Germany</sc>, from the <sc>8th to 12th of June, 2026</sc>. 
+	    	<br>
+			Join us in shaping the future of evolutionary biology!
+    		<br> <br>
+			<span class="update-badge">UPDATE!</span> Check out the <sc><a href="registration.html" style="color:#DD8D94; text-decoration:underline; font-family:inherit;">Registration</a></sc> page for submitting an abstract now! 
+		</p>
+			
+		</div>
+    	<div class="image">
+      		<img
+        	src="img/T1.png"
+        	alt="Logo"
+        	width="100%"
+			height="auto"
+      		/>
+
+		</div>
+
+	</div>
+
+	<div class="textimgcontainer">
+		<div class="textdates">
+			<p class="pserif">
+				<c>Important dates:</c>
+				<br>
+			</p>
+
+			<p class="pserif">
+			<div class="dates-grid">
+
+    				<div class="date-item">
+        				<div class="date-title">
+            				<i class="fa-solid fa-hourglass-start icon"></i>
+            				December 1, 2025
+        				</div>
+        				<div class="date-desc">Abstract submission open</div>
+    					</div>
+
+    			<div class="date-item">
+        			<div class="date-title">
+            			<i class="fa-solid fa-train icon"></i>
+            			January 15, 2026
+        			</div>
+        			<div class="date-desc">Deadline for abstracts from applicants to the ESEB Travel Grant</div>
+    			</div>
+
+    			<div class="date-item">
+        			<div class="date-title">
+            			<i class="fa-solid fa-hourglass-end icon"></i>
+            			February 1, 2026
+        			</div>
+        			<div class="date-desc"> General abstract submission deadline </div>
+				</div>
+
+    			<div class="date-item">
+        			<div class="date-title">
+            			<i class="fa-solid fa-hourglass-start icon"></i>
+            		    February 15, 2026
+        			</div>
+        		<div class="date-desc">Communication of abstract selection and registration opening</div>
+    			</div>
+
+				</div>
+		</p>
+		
+		</div>
+	</div>
+	
+</div>
+<div class="box">
+
+		<footer>
+	      <a
+	        href="mailto: empsebconf@gmail.com"
+	        class="fa fa-envelope"
+	        target="_blank"
+	      ></a>
+
+			<a
+	        href="www.linkedin.com/in/empseb-conference-a89a9338b"
+	        class="fa-brands fa-linkedin"
+	        target="_blank"
+	      ></a>
+
+	      <a
+	        href="https://bsky.app/profile/empseb31.bsky.social"
+	        class="fa-brands fa-bluesky"
+	        target="_blank"
+			aria-label="Bluesky"
+	      ></a>
+	    </footer>
+</div>
+	
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.querySelector(".hamburger");
+  const navRight = document.querySelector(".nav-right");
+
+  hamburger.addEventListener("click", function () {
+    navRight.classList.toggle("active");
+  });
+});
+</script>
+
+</body>
+</html>
+
+</body>
+</html>
