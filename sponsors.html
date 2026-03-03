@@ -88,6 +88,53 @@
   		object-fit: contain;
   		transition: transform 0.2s ease-in-out;
 	}
+	/* Container for each sponsor */
+.sponsor-item {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 15px;
+
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* Desktop hover */
+.sponsor-item:hover .overlay {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Mobile active state */
+.sponsor-item.active .overlay {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.overlay-text {
+  font-size: 14px;
+  line-height: 1.4;
+}
 
 /* --- Mobile styles --- */
 	@media screen and (max-width: 768px) {
@@ -202,8 +249,22 @@ header {
     	</p>	
 	<div class="sponsor-logos">
 		
-		<a href = "https://www.pyroscience.com/en/" target="_blank"><img src="img/Pyroscience.png" alt="Pyroscience"></a>
-		<a href = "https://www.evolutionsociety.org/" target="_blank"><img src="img/sse.png" alt="SSE"></a>
+		<a href = "https://www.pyroscience.com/en/" target="_blank"><img src="img/Pyroscience.png" alt="Pyroscience">
+		<div class="overlay">
+      <div class="overlay-text">
+        PyroScience develops high-precision optical sensor systems for measuring oxygen, pH, 
+		temperature, and other parameters in scientific and industrial applications.
+      </div>
+    </div>
+		</a>
+		<a href = "https://www.evolutionsociety.org/" target="_blank"><img src="img/sse.png" alt="SSE">
+		<div class="overlay">
+      <div class="overlay-text">
+        Society for the Study of Evolution (SSE) is an 
+		international scientific society founded in 1946, which supports research, education, and communication in evolution.
+      </div>
+    </div>
+		</a>
 		
 	</div>
 	</div>
@@ -268,6 +329,35 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
+	<script>
+document.querySelectorAll('[data-sponsor]').forEach(item => {
+  item.addEventListener('click', function(e) {
+
+    // If overlay not open, prevent navigation
+    if (!this.classList.contains('active')) {
+      e.preventDefault();
+
+      // Close others
+      document.querySelectorAll('.sponsor-item.active')
+        .forEach(el => el.classList.remove('active'));
+
+      this.classList.add('active');
+    }
+    // Second tap follows link
+  });
+});
+
+// Close if tapping outside
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.sponsor-item')) {
+    document.querySelectorAll('.sponsor-item.active')
+      .forEach(el => el.classList.remove('active'));
+  }
+});
+</script>
+
+
+	
   </body>
 </html>
 
