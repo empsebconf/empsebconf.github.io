@@ -67,87 +67,6 @@
   height: auto;
 }
 
-/* Base accordion (level 1) */
-.accordion {
-  background-color: #f6e6e8;
-  color: #333;
-  cursor: pointer;
-  padding: 12px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  font-size: 16px;
-  margin-top: 6px;
-  font-family: 'Source Sans Pro', sans-serif;
-}
-
-/* Level 2 (sub) */
-.accordion.sub {
-  background-color: #eed1d4;
-  
-  font-size: 15px;          /* slightly smaller */
-  
-  width: calc(100% - 20px); /* narrower */
-  margin-left: 20px;        /* indentation */
-  
-  padding: 10px;            /* slightly tighter */
-}
-
-/* Level 3 (sub2) */
-.accordion.sub2 {
-  background-color: #e4c3c7;
-  
-  font-size: 14px;          
-  width: calc(100% - 40px);
-  margin-left: 40px;
-  
-  padding: 9px;
-}
-
-/* Panel styling */
-.panel {
-  display: none;
-  padding: 12px 16px;
-  background-color: #ffffff;
-  border-left: 3px solid #DD8D94;
-  margin-bottom: 5px;
-}
-/* Panel under level 2 */
-.accordion.sub + .panel {
-  margin-left: 20px;
-  width: calc(100% - 20px);
-background-color: #faf7f8;
-}
-
-/* Panel under level 3 */
-.accordion.sub2 + .panel {
-  margin-left: 40px;
-  width: calc(100% - 40px);
-background-color: #f5f1f2;
-}
-
-/* Nested panels */
-.panel .panel {
-  background-color: #faf7f8;
-  border-left: 3px solid #e4c3c7;
-}
-
-.panel p {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #333;
-  margin: 0 0 10px 0;
-}
-
-.panel .pserif {
-  font-family: 'Source Sans Pro', sans-serif; /* or your serif if different */
-}
-
-.panel.open {
-  display: block;
-}
-
 /* --- Mobile styles --- */
 @media screen and (max-width: 768px) {
 header {
@@ -163,7 +82,7 @@ header {
   	.text, .image {
     	flex: 0 0 100%;           /* full width for both */
   	}
-	
+
   .nav-container {
     flex-direction: column;
     align-items: center;
@@ -201,18 +120,10 @@ header {
   .nav-right li {
     margin: 10px 0;
   }
-  .accordion.sub {
-    margin-left: 10px;
-    width: calc(100% - 10px);
-  }
-
-  .accordion.sub2 {
-    margin-left: 20px;
-    width: calc(100% - 20px);
-  }
-}
 	</style>
-	  
+
+
+
 <body>
 
 <nav class="nav-bar">
@@ -1554,24 +1465,73 @@ header {
 		  
       </ol>
 
+<div class="box" id="alt">
+  <div class="container">
+    <div class="text">
+
+      <!-- HEADER -->
+      <p class="pserif">
+        <c>Alternative Presentations</c>
+      </p>
+
+      <!-- NUMBERED LIST -->
+      <ol class="pserif">
+        <li>
+          CL Dheeraj –
+          <span style="color:#DD8D94; font-family:inherit;">
+            To flee, or not to flee, that is the question
+          </span>
+        </li>
+
+        <li>
+          Robin von Allmen –
+          <span style="color:#DD8D94; font-family:inherit;">
+            The Pollen Tree of Life: Diversity in pollen morphology across angiosperms
+          </span>
+        </li>
+
+        <li>
+          Zeynep Oguzhan –
+          <span style="color:#DD8D94; font-family:inherit;">
+            Population Genomics of Andean Grebes (Podiceps)
+          </span>
+        </li>
+
+        <li>
+          Diana Rojas Guerrero –
+          <span style="color:#DD8D94; font-family:inherit;">
+            Micro-allies during mega-crisis? The role of the microbiome in insect community responses to climate change
+          </span>
+        </li>		  
+
+        <li>
+          Temitope Oriowo –
+          <span style="color:#DD8D94; font-family:inherit;">
+            Population Genomics and Sex Chromosome Evolution in Phoxinus
+          </span>
+        </li>
+
+        <li>
+          Florian Robert Schmidt –
+          <span style="color:#DD8D94; font-family:inherit;">
+            Oops!… I bottlenecked the population again
+          </span>
+        </li>		  
+
+      </ol>
+
     </div>
   </div>
 </div>
+
 <script>
 document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.querySelector(".hamburger");
+  const navRight = document.querySelector(".nav-right");
 
-  document.querySelectorAll(".accordion").forEach(btn => {
-    btn.addEventListener("click", function () {
-
-      const panel = this.nextElementSibling;
-
-      const isOpen = panel.style.display === "block";
-
-      panel.style.display = isOpen ? "none" : "block";
-
-    });
+  hamburger.addEventListener("click", function () {
+    navRight.classList.toggle("active");
   });
-
 });
 </script>
 
