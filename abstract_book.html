@@ -34,9 +34,12 @@
 <style>
 
 	.container {
-  	 width: 100%;
-	 margin: 0 auto;
-	 margin-top: 20px;
+ 	 width: 100%;
+ 	 margin: 0 auto;
+ 	 margin-top: 20px;
+	
+ 	 display: flex;           /* ← restore this */
+  	flex-direction: column;  /* ← stack vertically (important) */
 	}
 
 	.text {
