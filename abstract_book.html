@@ -1489,26 +1489,23 @@ Using this genomic resource, we analyse population structure and island colonisa
     </div>
   </div>
 </div>
-	
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-  const accordions = document.querySelectorAll(".accordion");
-
-  accordions.forEach(btn => {
+  document.querySelectorAll(".accordion").forEach(btn => {
     btn.addEventListener("click", function () {
 
       const panel = this.nextElementSibling;
-      const isOpen = panel.style.display === "block";
+      const isOpen = panel.classList.contains("open");
 
-      // Toggle current panel
-      panel.style.display = isOpen ? "none" : "block";
+      // toggle current panel using class (NOT inline style)
+      panel.classList.toggle("open", !isOpen);
       this.classList.toggle("active", !isOpen);
 
-      // If closing, also close everything inside it
+      // if closing, also reset all children
       if (isOpen) {
         panel.querySelectorAll(".panel").forEach(p => {
-          p.style.display = "none";
+          p.classList.remove("open");
         });
 
         panel.querySelectorAll(".accordion").forEach(a => {
