@@ -67,6 +67,16 @@
   height: auto;
 }
 
+.talk-header {
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.talk-body {
+  display: none;
+  margin-top: 10px;
+}	
+
 /* --- Mobile styles --- */
 @media screen and (max-width: 768px) {
 header {
@@ -121,8 +131,6 @@ header {
     margin: 10px 0;
   }
 	</style>
-
-
 
 <body>
 
@@ -1534,6 +1542,15 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 </script>
+
+<script>
+document.querySelectorAll(".talk-header").forEach(header => {
+  header.addEventListener("click", () => {
+    const body = header.nextElementSibling;
+    body.style.display = (body.style.display === "block") ? "none" : "block";
+  });
+});
+</script>	
 
 </body>
 </html>
