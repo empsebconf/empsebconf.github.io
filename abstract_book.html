@@ -88,6 +88,12 @@
   margin-top: 10px;
 }
 
+.arrow {
+  display: inline-block;
+  margin-right: 8px;
+  transition: transform 0.2s ease;
+}
+
 /* --- Mobile styles --- */
 @media screen and (max-width: 768px) {
 header {
@@ -229,6 +235,7 @@ header {
       <div class="talk">
 
         <div class="talk-header">
+		  <span class="arrow">▶</span>
           <b>10:15 – 10:30</b><br>
 
           <span style="color:#DD8D94; font-family:inherit;">
@@ -251,6 +258,7 @@ header {
       <div class="talk">
 
         <div class="talk-header">
+		  <span class="arrow">▶</span>
           <b>10:30 – 10:45</b><br>
 
           <span style="color:#DD8D94; font-family:inherit;">
@@ -277,6 +285,7 @@ header {
       <div class="talk">
 
         <div class="talk-header">
+		  <span class="arrow">▶</span>
           <b>10:45 – 11:00</b><br>
 
           <span style="color:#DD8D94; font-family:inherit;">
@@ -300,6 +309,7 @@ header {
       <div class="talk">
 
         <div class="talk-header">
+		  <span class="arrow">▶</span>
           <b>10:45 – 11:00</b><br>
 
           <span style="color:#DD8D94; font-family:inherit;">
@@ -324,6 +334,7 @@ header {
       <div class="talk">
 
         <div class="talk-header">
+		  <span class="arrow">▶</span>
           <b>11:00 – 11:15</b><br>
 
           <span style="color:#DD8D94; font-family:inherit;">
@@ -351,6 +362,7 @@ header {
       <div class="talk">
 
         <div class="talk-header">
+		  <span class="arrow">▶</span>
           <b>11:15 – 11:30</b><br>
 
           <span style="color:#DD8D94; font-family:inherit;">
@@ -1554,7 +1566,21 @@ document.querySelectorAll(".talk-header").forEach(header => {
     body.style.display = (body.style.display === "block") ? "none" : "block";
   });
 });
-</script>	
+</script>
+
+<script>
+document.querySelectorAll(".talk-header").forEach(header => {
+  header.addEventListener("click", () => {
+    const body = header.nextElementSibling;
+    const arrow = header.querySelector(".arrow");
+
+    const isOpen = body.style.display === "block";
+
+    body.style.display = isOpen ? "none" : "block";
+    arrow.style.transform = isOpen ? "rotate(0deg)" : "rotate(90deg)";
+  });
+});
+</script>
 
 </body>
 </html>
