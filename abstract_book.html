@@ -67,6 +67,34 @@
   height: auto;
 }
 
+.accordion {
+  background-color: #eee;
+  color: #333;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.accordion.sub {
+  background-color: #ddd;
+  padding-left: 20px;
+}
+
+.accordion.sub2 {
+  background-color: #ccc;
+  padding-left: 40px;
+}
+
+.panel {
+  display: none;
+  padding: 10px;
+  background-color: white;
+}
+
 /* --- Mobile styles --- */
 @media screen and (max-width: 768px) {
 header {
@@ -121,7 +149,22 @@ header {
     margin: 10px 0;
   }
 	</style>
-	  
+<script>
+  const accordions = document.querySelectorAll(".accordion");
+
+  accordions.forEach(btn => {
+    btn.addEventListener("click", function () {
+      this.classList.toggle("active");
+
+      const panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  });
+</script>	  
 
 	  
 <body>
@@ -202,24 +245,27 @@ header {
     <div class="text">
 
       <!-- SESSION HEADER -->
-      <p class="pserif">
-        <c>Session 1A – Adaptation and Urban Evolution</c>
+    <div class = "session">  
+	<p class="pserif">
+       <button class="accordian"> <c>Session 1A – Adaptation and Urban Evolution</c> </button>
       </p>
 
       <!-- TALK 1 -->
       <p class="pserif">
         <span style="color:#DD8D94; font-family:inherit;">
-          The adaptation landscape of low-dispersive arthropods across time and space
-        </span><br>
-
-        <i>
-          by Fatima Jlil, Aarhus University, Denmark
-        </i><br><br>
-
-        Spatiotemporal signatures of selection reveal how the recolonisation of a habitat, in combination with contemporary population dynamics, shapes the adaptive landscape of a species, i.e. the spatiotemporal mosaic of selection. We investigated the adaptation landscape of six <i>Collembola</i> species across Denmark and identified a northward post-glacial recolonisation history that strongly influences the spatial distribution of adaptive signals. We found that a significant proportion of selective sweeps were due to shared ancestry rather than independent convergent evolution. These ancestral sweeps are broader than younger, population-specific sweeps, which supports the expectation of temporal changes in selection intensity. Depending on its level and population demography, patterns of gene flow can hinder or promote adaptation: while high gene flow can rescue small populations but prevent local adaptation, low gene flow may allow local adaptation but increase extinction risks in small populations.<br><br> 
+        <button class="accordion sub">  
+		Fatima Jlil: The adaptation landscape of low-dispersive arthropods across time and space </button>
+      <div class="panel">
+      <button class="accordion sub2"> Abstract </button>
+		<div class= "panel">
+			<p>
+        Spatiotemporal signatures of selection reveal how the recolonisation of a habitat, in combination with contemporary population dynamics, 
+		shapes the adaptive landscape of a species, i.e. the spatiotemporal mosaic of selection. 
+		We investigated the adaptation landscape of six <i>Collembola</i> species across Denmark and identified a northward post-glacial recolonisation history that strongly influences the spatial distribution of adaptive signals. We found that a significant proportion of selective sweeps were due to shared ancestry rather than independent convergent evolution. These ancestral sweeps are broader than younger, population-specific sweeps, which supports the expectation of temporal changes in selection intensity. Depending on its level and population demography, patterns of gene flow can hinder or promote adaptation: while high gene flow can rescue small populations but prevent local adaptation, low gene flow may allow local adaptation but increase extinction risks in small populations.<br><br> 
 	    We identified varying levels of gene flow among species over the past ~4000 years, ranging from stable to decreasing or fully interrupted. We predict that these patterns will be reflected in the adaptation landscapes of different species. The patterns of selection identified in light of declining gene flow rates are consistent with different selection regimes acting during the early colonisation of Denmark following Pleistocene glaciations, as well as with current selection acting on increasingly isolated populations. Integrating genetic and demographic analyses suggests a decline in the adaptive potential of these soil-dwelling arthropods, likely driven by intensive land use and habitat fragmentation, which cause reductions in gene flow.
-      </p>		
-
+			</p>
+		</div>
+	  </div>
       <!-- TALK 2 -->
       <p class="pserif">
         <span style="color:#DD8D94; font-family:inherit;">
