@@ -67,9 +67,9 @@
   height: auto;
 }
 
-/* Base accordion */
+/* Base accordion (level 1) */
 .accordion {
-  background-color: #f6e6e8; /* very light pink */
+  background-color: #f6e6e8;
   color: #333;
   cursor: pointer;
   padding: 12px;
@@ -81,16 +81,27 @@
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-/* Level 2 */
+/* Level 2 (sub) */
 .accordion.sub {
-  background-color: #eed1d4; /* soft pink */
-  padding-left: 20px;
+  background-color: #eed1d4;
+  
+  font-size: 15px;          /* slightly smaller */
+  
+  width: calc(100% - 20px); /* narrower */
+  margin-left: 20px;        /* indentation */
+  
+  padding: 10px;            /* slightly tighter */
 }
 
-/* Level 3 */
+/* Level 3 (sub2) */
 .accordion.sub2 {
-  background-color: #e4c3c7; /* slightly deeper */
-  padding-left: 40px;
+  background-color: #e4c3c7;
+  
+  font-size: 14px;          
+  width: calc(100% - 40px);
+  margin-left: 40px;
+  
+  padding: 9px;
 }
 
 /* Panel styling */
@@ -174,6 +185,16 @@ header {
   .nav-right li {
     margin: 10px 0;
   }
+  .accordion.sub {
+    margin-left: 10px;
+    width: calc(100% - 10px);
+  }
+
+  .accordion.sub2 {
+    margin-left: 20px;
+    width: calc(100% - 20px);
+  }
+}
 	</style>
 	  
 <body>
