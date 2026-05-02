@@ -149,23 +149,6 @@ header {
     margin: 10px 0;
   }
 	</style>
-<script>
-  const accordions = document.querySelectorAll(".accordion");
-
-  accordions.forEach(btn => {
-    btn.addEventListener("click", function () {
-      this.classList.toggle("active");
-
-      const panel = this.nextElementSibling;
-      if (panel.style.display === "block") {
-        panel.style.display = "none";
-      } else {
-        panel.style.display = "block";
-      }
-    });
-  });
-</script>	  
-
 	  
 <body>
 
@@ -246,9 +229,7 @@ header {
 
       <!-- SESSION HEADER -->
     <div class = "session">  
-	<p class="pserif">
-       <button class="accordian"> <c>Session 1A – Adaptation and Urban Evolution</c> </button>
-      </p>
+       <button class="accordion"> <c>Session 1A – Adaptation and Urban Evolution</c> </button>
 
       <!-- TALK 1 -->
       <p class="pserif">
@@ -1525,6 +1506,21 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const accordions = document.querySelectorAll(".accordion");
+
+  accordions.forEach(btn => {
+    btn.addEventListener("click", function () {
+      const panel = this.nextElementSibling;
+
+      panel.style.display =
+        panel.style.display === "block" ? "none" : "block";
+    });
+  });
+});
+</script>
+	
 
 </body>
 </html>
