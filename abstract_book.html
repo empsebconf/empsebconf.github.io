@@ -67,32 +67,58 @@
   height: auto;
 }
 
+/* Base accordion */
 .accordion {
-  background-color: #eee;
+  background-color: #f6e6e8; /* very light pink */
   color: #333;
   cursor: pointer;
-  padding: 10px;
+  padding: 12px;
   width: 100%;
   border: none;
   text-align: left;
   font-size: 16px;
-  margin-top: 5px;
+  margin-top: 6px;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
+/* Level 2 */
 .accordion.sub {
-  background-color: #ddd;
+  background-color: #eed1d4; /* soft pink */
   padding-left: 20px;
 }
 
+/* Level 3 */
 .accordion.sub2 {
-  background-color: #ccc;
+  background-color: #e4c3c7; /* slightly deeper */
   padding-left: 40px;
 }
 
+/* Panel styling */
 .panel {
   display: none;
-  padding: 10px;
-  background-color: white;
+  padding: 12px 16px;
+  background-color: #ffffff;
+  border-left: 3px solid #DD8D94;
+  margin-bottom: 5px;
+}
+
+/* Nested panels */
+.panel .panel {
+  background-color: #faf7f8;
+  border-left: 3px solid #e4c3c7;
+}
+
+.panel p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  margin: 0 0 10px 0;
+}
+
+/* Optional: match your serif class if needed */
+.panel .pserif {
+  font-family: 'Source Sans Pro', sans-serif; /* or your serif if different */
 }
 
 /* --- Mobile styles --- */
@@ -229,15 +255,16 @@ header {
 
       <!-- SESSION HEADER -->
     <div class = "session">  
-       <button class="accordion"> <c>Session 1A – Adaptation and Urban Evolution</c> </button>
+       <button class="accordion"> <p class="pserif"> <c>Tue: Session 1A – Adaptation and Urban Evolution</c> </p> </button>
 
       <!-- TALK 1 -->
         <button class="accordion sub">  
-		Fatima Jlil: The adaptation landscape of low-dispersive arthropods across time and space </button>
+		<p class= "pserif">
+		Fatima Jlil: The adaptation landscape of low-dispersive arthropods across time and space </button> </p>
       <div class="panel">
       <button class="accordion sub2"> Abstract </button>
 		<div class= "panel">
-			<p>
+			<p class="pserif">
         Spatiotemporal signatures of selection reveal how the recolonisation of a habitat, in combination with contemporary population dynamics, 
 		shapes the adaptive landscape of a species, i.e. the spatiotemporal mosaic of selection. 
 		We investigated the adaptation landscape of six <i>Collembola</i> species across Denmark and identified a northward post-glacial recolonisation history that strongly influences the spatial distribution of adaptive signals. We found that a significant proportion of selective sweeps were due to shared ancestry rather than independent convergent evolution. These ancestral sweeps are broader than younger, population-specific sweeps, which supports the expectation of temporal changes in selection intensity. Depending on its level and population demography, patterns of gene flow can hinder or promote adaptation: while high gene flow can rescue small populations but prevent local adaptation, low gene flow may allow local adaptation but increase extinction risks in small populations.<br><br> 
