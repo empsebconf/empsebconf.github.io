@@ -1563,15 +1563,6 @@ document.addEventListener("DOMContentLoaded", function () {
 document.querySelectorAll(".talk-header").forEach(header => {
   header.addEventListener("click", () => {
     const body = header.nextElementSibling;
-    body.style.display = (body.style.display === "block") ? "none" : "block";
-  });
-});
-</script>
-
-<script>
-document.querySelectorAll(".talk-header").forEach(header => {
-  header.addEventListener("click", () => {
-    const body = header.nextElementSibling;
     const arrow = header.querySelector(".arrow");
 
     const isOpen = body.style.display === "block";
