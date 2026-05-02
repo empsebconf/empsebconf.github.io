@@ -1503,32 +1503,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const panel = this.nextElementSibling;
 
-      if (panel.style.display === "block") {
-        panel.style.display = "none";
-      } else {
-        panel.style.display = "block";
-      }
+      const isOpen = panel.style.display === "block";
+
+      panel.style.display = isOpen ? "none" : "block";
 
     });
   });
 
 });
 </script>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const accordions = document.querySelectorAll(".accordion");
-
-  accordions.forEach(btn => {
-    btn.addEventListener("click", function () {
-      const panel = this.nextElementSibling;
-
-      panel.style.display =
-        panel.style.display === "block" ? "none" : "block";
-    });
-  });
-});
-</script>
-	
 
 </body>
 </html>
