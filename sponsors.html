@@ -71,6 +71,24 @@
   		height: auto;
 	}
 
+	.sponsor-logos {
+  		display: grid;
+  		grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  		gap: 40px;
+  		max-width: 1000px;
+  		margin: 40px auto;
+  		align-items: center;
+  		justify-items: center;
+	}
+
+	.sponsor-logos img {
+  		width: 100%;
+  		max-width: 550px;
+  		height: auto;
+  		object-fit: contain;
+  		transition: transform 0.2s ease-in-out;
+	}
+
 	.sponsor-item {
     	position: relative;
     	display: flex;
@@ -81,22 +99,6 @@
     	overflow: hidden;
     	cursor: pointer;
 	}
-
-	.sponsor-logos img {
-  		width: 100%;
-  		max-width: 550px;
-  		height: auto;
-  		object-fit: contain;
-  		transition: transform 0.2s ease-in-out;
-	}
-	/* Container for each sponsor */
-.sponsor-item {
-  position: relative;
-  display: block;
-  width: 100%;
-  overflow: hidden;
-  cursor: pointer;
-}
 
 /* Overlay */
 .overlay {
