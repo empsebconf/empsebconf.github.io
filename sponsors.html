@@ -71,14 +71,15 @@
   		height: auto;
 	}
 
-	.sponsor-logos {
-  		display: grid;
-  		grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  		gap: 40px;
-  		max-width: 1000px;
-  		margin: 40px auto;
-  		align-items: center;
-  		justify-items: center;
+	.sponsor-item {
+    	position: relative;
+    	display: flex;
+    	align-items: center;
+    	justify-content: center;
+    	width: 250px;   /* equal width */
+    	height: 180px;  /* equal card size */
+    	overflow: hidden;
+    	cursor: pointer;
 	}
 
 	.sponsor-logos img {
